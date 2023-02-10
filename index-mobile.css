@@ -1,0 +1,97 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  scroll-behavior: smooth;
+}
+
+/* cabeçalho */
+.hd {
+  width: 100%;
+  background-color: white;
+  height: 120px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 1;
+}
+.hd-1 img {
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+  right: 30px;
+}
+
+/* menu hamburguer */
+.material-symbols-outlined {
+  cursor: pointer;
+  color: #3367d5;
+}
+.nv {
+  background-color: #3367d5;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  transition: 0.3s;
+
+  top: 100px;
+}
+.nv ul {
+  overflow: hidden;
+  list-style: none;
+  width: 100%;
+  position: relative;
+  right: 25px;
+  height: 100%;
+}
+.nv li {
+  margin-top: 50px;
+}
+.nv a {
+  color: white;
+  font-family: montserrat;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.open {
+  width: 40%;
+  transition: 0.3s;
+}
+
+/* main do site */
+.mn {
+  width: 100%;
+}
+.mn-1 h1 {
+  font-family: montserrat;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+.mn-1 img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 150px;
+}
+
+/* regulamento do ranking */
+
+.sec-1 h1 {
+  font-family: montserrat;
+  text-align: center;
+  color: #3367d5;
+  margin-top: 30px;
+}
+.sec-1 a {
+  display: flex;
+  justify-content: center;
+  font-family: montserrat;
+  margin-top: 15px;
+}
+
+/* chaveamento */
