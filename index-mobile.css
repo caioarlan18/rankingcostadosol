@@ -77,6 +77,8 @@
   width: 100%;
   object-fit: cover;
   margin-top: 150px;
+  text-align: center;
+  width: 95%;
 }
 
 /* regulamento do ranking */
