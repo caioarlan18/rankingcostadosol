@@ -67,17 +67,14 @@
 .mn {
   width: 100%;
 }
-.mn-1 h1 {
-  font-family: montserrat;
-  font-size: 30px;
-  text-align: center;
-  color: black;
-}
 
 .mn-1 img {
   width: 100%;
   object-fit: cover;
   margin-top: 150px;
+}
+.mn-2 {
+  display: none;
 }
 
 /* regulamento do ranking */
@@ -136,4 +133,7 @@
 }
 .chaveopen {
   display: block;
+}
+.hd-2 {
+  display: none;
 }
