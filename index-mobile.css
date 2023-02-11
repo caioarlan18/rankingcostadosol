@@ -33,9 +33,8 @@
   height: 100%;
   width: 0;
   position: fixed;
-  top: 0;
   transition: 0.3s;
-  top: 100px;
+  top: 120px;
   z-index: 11;
 }
 .nv ul {
