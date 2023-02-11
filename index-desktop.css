@@ -70,6 +70,15 @@
     width: 95%;
     font-size: 20px;
   }
+  /* menu arrow (submenu home desktop) */
+  .submenu3,
+  .submenu4 {
+    display: none;
+    margin-top: 25px;
+  }
+  .submenuopen1 {
+    display: block;
+  }
 }
 @media screen and (min-width: 280px) and (max-width: 653px) {
   .open {
