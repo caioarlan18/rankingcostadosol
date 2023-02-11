@@ -136,3 +136,20 @@
 .hd-2 {
   display: none;
 }
+
+/* menu arrow (submenu home mobile) */
+.arrow {
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.submenu1,
+.submenu2 {
+  margin-top: 25px;
+  display: none;
+}
+.submenuopen {
+  display: block;
+}
