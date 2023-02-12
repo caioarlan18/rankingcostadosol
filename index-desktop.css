@@ -3,10 +3,10 @@
   .nv {
     display: none;
   }
-  .hd-1 {
+  .hdd-1 {
     display: none;
   }
-  .hd {
+  .hdd {
     display: flex;
   }
   .hd-2 {
@@ -23,6 +23,7 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
   .hd-2 a {
     color: #3367d5;
     font-family: montserrat;
@@ -52,7 +53,10 @@
     margin-top: 120px;
     width: 100%;
   }
-
+  /* login */
+  .hd {
+    width: 50%;
+  }
   /* regulamento */
 
   .sec-1 h1 {
