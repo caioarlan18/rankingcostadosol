@@ -122,6 +122,7 @@
   z-index: 10;
   display: none;
 }
+
 .chav-1 {
   margin-top: 50px;
 }
@@ -144,7 +145,6 @@
   margin-left: 5px;
   cursor: pointer;
 }
-
 .submenu1,
 .submenu2 {
   margin-top: 25px;
@@ -157,19 +157,35 @@
 /* galeria de fotos */
 .tabela {
   position: relative;
-  bottom: 40px;
-  height: 100px;
+  bottom: 120px;
+  height: 50px;
   background-color: white;
   border-top-right-radius: 30%;
   border-top-left-radius: 30%;
+  margin-top: 100px;
+}
+.tabela1 {
+  height: 50px;
+  margin-bottom: 50px;
 }
 .tabela-1 h1 {
   text-align: center;
   font-family: montserrat;
   color: #3367d5;
   position: relative;
-  top: 50px;
+  top: 40px;
   width: 95%;
+}
+.tabela1 h1 {
+  text-align: center;
+  font-family: montserrat;
+  color: #3367d5;
+
+  width: 95%;
+}
+#tabelaNaoEditavel2 {
+  position: relative;
+  top: 2px;
 }
 /* login do organizador */
 
@@ -369,6 +385,34 @@ tr:nth-child(even) {
   background-color: #1055cc;
   transition: 0.3s;
 }
+.addnew3 {
+  background-color: #3367d5;
+  padding: 10px 10px;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addnewb {
+  background-color: #3367d5;
+  padding: 10px 10px;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addnew3:hover {
+  background-color: #1055cc;
+  transition: 0.3s;
+}
 /* chave org */
 .orgpage-1 p {
   text-align: center;
@@ -384,4 +428,27 @@ tr:nth-child(even) {
 .orgpage-1 {
   border-bottom: 1px solid #3367d5;
   padding: 30px;
+}
+
+/* footer */
+
+.ft {
+  display: flex;
+  background-color: #3367d5;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+.ft-1 h1 {
+  font-family: montserrat;
+  font-size: 20px;
+  color: black;
+  margin-top: 60px;
+}
+.ft-1 a {
+  font-family: montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  top: 10px;
+  color: #c92c36;
 }
