@@ -18,12 +18,12 @@
 </head>
 
 <body>
-    <!-- cabeçalho desktop -->
-    <header class="hd">
-        <div class="hd-1">
+    <!-- cabeçalho mobile -->
+    <header class="hdd">
+        <div class="hdd-1">
             <img src="./img/logo-do-site.png" alt="logo principal do site" width="210px" height="210px">
         </div>
-        <div class="hd-1">
+        <div class="hdd-1">
             <span class="material-symbols-outlined" onclick="menu_hamburguer()">
                 menu
             </span>
@@ -45,7 +45,7 @@
             <li><a href="#" onclick="chav()">Chaveamento</a></li>
         </div>
         <div class="hd-2">
-            <li><a href="login.html">Entrar como organizador</a></li>
+            <li><a href="#" onclick="org()">Entrar como organizador</a></li>
         </div>
     </header>
 
@@ -60,7 +60,7 @@
             <a href="#" class="submenu2">Instagram</a>
             <li><a href="#" onclick="reg()">Regulamentos</a></li>
             <li><a href="#" onclick="chav()">Chaveamento</a></li>
-            <li><a href="login.html">Entrar como organizador</a></li>
+            <li><a href="#" onclick="org()">Entrar como organizador</a></li>
         </ul>
     </nav>
 
@@ -92,9 +92,61 @@
         </div>
     </section>
 
-    <!-- galeria de fotos -->
+    <!-- pontuação do ranking -->
+    <section class="tabela">
+        <div class="tabela-1">
+            <h1>Tabela de pontuação do ranking costa do sol</h1>
+        </div>
+    </section>
+    <table id="tabelaNaoEditavel">
+        <tr>
+            <td id="celulaNaoEditavel1">teste</td>
+            <td id="celulaNaoEditavel2">teste</td>
+        </tr>
+        <tr>
+            <td id="celulaNaoEditavel3">teste</td>
+            <td id="celulaNaoEditavel4">teste</td>
+        </tr>
+    </table>
 
+    <!-- login de organizador -->
+    <div class="back">
+        <header class="hd">
+            <div class="hd-1">
+                <h1>Entrar como organizador <a href="#" id="info">?</a></h1>
+                <h2>para isso, insira seu login</h2>
+            </div>
+            <div class="hdd-2">
+                <input type="email" placeholder="Email" class="email">
+                <input type="password" placeholder="Senha" class="senha">
+            </div>
 
+            <div class="hd-3">
+                <input type="submit" value="Entrar" class="entrar">
+
+            </div>
+        </header>
+    </div>
+
+    <!-- pagina do organizador -->
+
+    <section class="orgpage">
+        <div class="orgpage-1">
+            <h1>Página do organizador</h1>
+        </div>
+        <div class="orgpage-1">
+            <table id="tabelaEditavel">
+                <tr>
+                    <td contenteditable="true" oninput="atualizarTabela()">Coluna 1, Linha 1</td>
+                    <td contenteditable="true" oninput="atualizarTabela()">Coluna 2, Linha 1</td>
+                </tr>
+                <tr>
+                    <td contenteditable="true" oninput="atualizarTabela()">Coluna 1, Linha 2</td>
+                    <td contenteditable="true" oninput="atualizarTabela()">Coluna 2, Linha 2</td>
+                </tr>
+            </table>
+        </div>
+    </section>
     <script src="index.js"></script>
 </body>
 
