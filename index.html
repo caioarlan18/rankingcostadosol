@@ -38,8 +38,8 @@
         <div class="hd-2">
             <li><a href="#" onclick="home()">Home</a><img src="./img/arrow-desktop.svg" alt="" width="15px"
                     height="15px" class="arrow" onclick="arrow()"></li>
-            <a href="#" class="submenu3">Galeria</a>
-            <a href="#" class="submenu4">Instagram</a>
+            <a href="https://www.instagram.com/tmprogressocabofrio/" class="submenu3">Instagram</a>
+            <a href="https://www.facebook.com/tmprogresso.cabofrio.5" class="submenu4">Facebook</a>
         </div>
         <div class="hd-2">
             <li><a href="#" onclick="reg()">Regulamentos</a></li>
@@ -59,8 +59,8 @@
                     src="./img/keyboard-left-arrow-button_icon-icons.com_72692.svg" alt="" width="15px" height="15px"
                     class="arrow" onclick="arrow()">
             </li>
-            <a href="#" class="submenu1">Galeria</a>
-            <a href="#" class="submenu2">Instagram</a>
+            <a href="https://www.instagram.com/tmprogressocabofrio/" class="submenu1">Instagram</a>
+            <a href="https://www.facebook.com/tmprogresso.cabofrio.5" class="submenu2">Facebook</a>
             <li><a href="#" onclick="reg()">Regulamentos</a></li>
             <li><a href="#" onclick="chav()">Chaveamento</a></li>
             <li><a href="#" onclick="org()">Entrar como organizador</a></li>
@@ -71,7 +71,7 @@
     <!-- main do site -->
     <main class="mn">
         <div class="mn-1">
-            <img src="./img/tenis-mesa-1.png" alt="imagem principal do site">
+            <img src="./img/tenis-mesa-1.png" alt="imagem principal do site" id="mn">
         </div>
         <div class="mn-2">
             <img src="./img/4262849.jpg" alt="">
@@ -102,9 +102,24 @@
             </tr>
 
         </table>
+
+        <div class="chav-1">
+            <h1>Chaveamento - Categoria B</h1>
+        </div>
+        <table id="chavNaoEditavel2">
+            <tr>
+                <td class="esp">1</td>
+                <td class="esp">2</td>
+                <td class="esp">3</td>
+                <td class="esp">4</td>
+            </tr>
+
+        </table>
     </section>
 
+
     <!-- pontuação do ranking(nao editavel) -->
+    <!-- categoria A -->
     <section class="tabela">
         <div class="tabela-1">
             <h1>Tabela de pontuação do ranking costa do sol - Categoria A</h1>
@@ -118,13 +133,20 @@
             <td class="esp">Pontos</td>
         </tr>
     </table>
+
+    <!-- categoria B -->
     <section class="tabela2">
-        <div class="tabela-1">
+        <div class="tabela1">
             <h1>Tabela de pontuação do ranking costa do sol - Categoria B</h1>
 
         </div>
     </section>
-
+    <table id="tabelaNaoEditavel2" class="tabela1">
+        <tr>
+            <td class="esp">Nome</td>
+            <td class="esp">Pontos</td>
+        </tr>
+    </table>
 
     <!-- login de organizador -->
     <div class="back">
@@ -167,8 +189,8 @@
 
         <div class="orgpage-1">
             <h2>Editar tabela de pontuação - Categoria B</h2>
-            <button class="addnew">adicionar à tabela</button>
-            <table id="tabelaEditavel">
+            <button class="addnewb">adicionar à tabela</button>
+            <table id="tabelaEditavel2">
                 <tr>
                     <td class="esp">Nome</td>
                     <td class="esp">Pontos</td>
@@ -204,13 +226,13 @@
             <h2>Editar chaves do torneio - Categoria B</h2>
             <p>Número de pessoas na chave</p>
 
-            <select id="option">
+            <select id="option1">
                 <option value="2" class="option1">2</option>
                 <option value="3" class="option1">3</option>
                 <option value="4" class="option1">4</option>
             </select>
-            <button class="addnew2">Criar chaves</button>
-            <table id="chavEditavel">
+            <button class="addnew3">Criar chaves</button>
+            <table id="chavEditavel2">
                 <tr>
                     <td class="esp">1</td>
                     <td class="esp">2</td>
@@ -220,6 +242,8 @@
             </table>
         </div>
     </section>
+
+
     <script src="index.js"></script>
 </body>
 
