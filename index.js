@@ -1,3 +1,6 @@
+
+
+
 var menu = document.querySelector('nav.nv')
 var sec = document.querySelector('section.sec')
 var chave = document.querySelector('section.chav')
@@ -84,6 +87,10 @@ tabelaEditavel.addEventListener('input', (e) => {
         var linha = e.target.parentNode;
         var celulaNaoEditavel = tabelaNaoEditavel.rows[linha.rowIndex].cells[e.target.cellIndex];
         celulaNaoEditavel.textContent = e.target.textContent;
+        firestore.collection("tabela").add({
+            celula1: td1Editavel.textContent,
+            celula2: td2Editavel.textContent
+        });
     }
 });
 var addnew = document.querySelector("button.addnew");
@@ -192,6 +199,24 @@ function criarNovaLinha() {
     chavEditavel.appendChild(br)
     chavEditavel.appendChild(br)
     tabelaNaoEditavel.appendChild(broken)
+
+    let linhasAdicionadas = [];
+    linhasAdicionadas.push(tr);
+    linhasAdicionadas.push(trNaoEditavel);
+    const excluirTudo = document.querySelector("button.excluirtudo")
+    excluirTudo.addEventListener('click', () => {
+        // Remove apenas as linhas adicionadas pelo botão "Adicionar"
+        for (let i = 0; i < linhasAdicionadas.length; i++) {
+            linhasAdicionadas[i].remove();
+        }
+        // Limpa a lista de linhas adicionadas
+        linhasAdicionadas = [];
+    });
+
+
+
+
+
 }
 const addnew2 = document.querySelector('button.addnew2');
 addnew2.addEventListener('click', criarNovaLinha);
@@ -228,6 +253,18 @@ function criarNovaLinha1() {
     chavEditavel.appendChild(br)
     chavEditavel.appendChild(br)
     tabelaNaoEditavel.appendChild(broken)
+    let linhasAdicionadas = [];
+    linhasAdicionadas.push(tr);
+    linhasAdicionadas.push(trNaoEditavel);
+    const excluirTudo = document.querySelector("button.excluirtudo2")
+    excluirTudo.addEventListener('click', () => {
+        // Remove apenas as linhas adicionadas pelo botão "Adicionar"
+        for (let i = 0; i < linhasAdicionadas.length; i++) {
+            linhasAdicionadas[i].remove();
+        }
+        // Limpa a lista de linhas adicionadas
+        linhasAdicionadas = [];
+    });
 }
 const addnew3 = document.querySelector('button.addnew3');
 addnew3.addEventListener('click', criarNovaLinha1);
@@ -274,3 +311,6 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
         senha.value = ''
     }
 })
+
+// firebase
+
