@@ -377,6 +377,20 @@ tr:nth-child(even) {
   cursor: pointer;
   transition: 0.3s;
 }
+.excluirtudo,
+.excluirtudo2 {
+  background-color: #e7260c;
+  padding: 10px 10px;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
 .addnew:hover {
   background-color: #1055cc;
   transition: 0.3s;
