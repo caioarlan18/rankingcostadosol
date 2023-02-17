@@ -214,8 +214,6 @@ function criarNovaLinha1() {
     const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel2");
     const tr = document.createElement('tr');
     const trNaoEditavel = document.createElement('tr');
-    const br = document.createElement('br')
-    const broken = document.createElement('br')
     for (let i = 0; i < select.value; i++) {
         const td = document.createElement('td');
         td.contentEditable = true;
@@ -234,9 +232,6 @@ function criarNovaLinha1() {
 
     chavEditavel.appendChild(tr);
     tabelaNaoEditavel.appendChild(trNaoEditavel);
-    chavEditavel.appendChild(br)
-    chavEditavel.appendChild(br)
-    tabelaNaoEditavel.appendChild(broken)
     let linhasAdicionadas = [];
     linhasAdicionadas.push(tr);
     linhasAdicionadas.push(trNaoEditavel);
@@ -266,6 +261,7 @@ function org() {
     tabela2.classList.add('htabela')
     tabela1.classList.add('htabela')
 }
+
 
 // login page
 var info = document.querySelector('a#info')
