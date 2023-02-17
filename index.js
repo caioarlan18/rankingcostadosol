@@ -176,8 +176,6 @@ function criarNovaLinha() {
     const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel");
     const tr = document.createElement('tr');
     const trNaoEditavel = document.createElement('tr');
-    const br = document.createElement('br')
-    const broken = document.createElement('br')
     for (let i = 0; i < select.value; i++) {
         const td = document.createElement('td');
         td.contentEditable = true;
@@ -196,27 +194,20 @@ function criarNovaLinha() {
 
     chavEditavel.appendChild(tr);
     tabelaNaoEditavel.appendChild(trNaoEditavel);
-    chavEditavel.appendChild(br)
-    chavEditavel.appendChild(br)
-    tabelaNaoEditavel.appendChild(broken)
+
 
     let linhasAdicionadas = [];
     linhasAdicionadas.push(tr);
     linhasAdicionadas.push(trNaoEditavel);
     const excluirTudo = document.querySelector("button.excluirtudo")
     excluirTudo.addEventListener('click', () => {
-        // Remove apenas as linhas adicionadas pelo botão "Adicionar"
+
         for (let i = 0; i < linhasAdicionadas.length; i++) {
             linhasAdicionadas[i].remove();
         }
-        // Limpa a lista de linhas adicionadas
+
         linhasAdicionadas = [];
     });
-
-
-
-
-
 }
 const addnew2 = document.querySelector('button.addnew2');
 addnew2.addEventListener('click', criarNovaLinha);
@@ -312,5 +303,4 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
     }
 })
 
-// firebase
 
