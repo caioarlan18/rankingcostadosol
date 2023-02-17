@@ -1,6 +1,3 @@
-
-
-
 var menu = document.querySelector('nav.nv')
 var sec = document.querySelector('section.sec')
 var chave = document.querySelector('section.chav')
@@ -87,10 +84,6 @@ tabelaEditavel.addEventListener('input', (e) => {
         var linha = e.target.parentNode;
         var celulaNaoEditavel = tabelaNaoEditavel.rows[linha.rowIndex].cells[e.target.cellIndex];
         celulaNaoEditavel.textContent = e.target.textContent;
-        firestore.collection("tabela").add({
-            celula1: td1Editavel.textContent,
-            celula2: td2Editavel.textContent
-        });
     }
 });
 var addnew = document.querySelector("button.addnew");
@@ -302,5 +295,3 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
         senha.value = ''
     }
 })
-
-
