@@ -147,7 +147,6 @@
             <td class="esp">Pontos</td>
         </tr>
     </table>
-
     <!-- login de organizador -->
     <div class="back">
         <header class="hd">
@@ -176,6 +175,7 @@
         <div class="orgpage-1">
             <h2>Editar tabela de pontuação - Categoria A</h2>
             <button class="addnew">adicionar à tabela</button>
+            <button class="salvar1">Salvar</button>
             <table id="tabelaEditavel">
                 <tr>
                     <td class="esp">Nome</td>
@@ -190,6 +190,7 @@
         <div class="orgpage-1">
             <h2>Editar tabela de pontuação - Categoria B</h2>
             <button class="addnewb">adicionar à tabela</button>
+            <button class="salvar2">Salvar</button>
             <table id="tabelaEditavel2">
                 <tr>
                     <td class="esp">Nome</td>
@@ -212,6 +213,7 @@
             </select>
             <button class="addnew2">Criar chaves</button>
             <button class="excluirtudo">Excluir tudo</button>
+            <button class="salvar3">Salvar</button>
             <table id="chavEditavel">
                 <tr>
                     <td class="esp">1</td>
@@ -234,6 +236,7 @@
             </select>
             <button class="addnew3">Criar chaves</button>
             <button class="excluirtudo2">Excluir tudo</button>
+            <button class="salvar4">Salvar</button>
             <table id="chavEditavel2">
                 <tr>
                     <td class="esp">1</td>
@@ -243,11 +246,23 @@
                 </tr>
             </table>
         </div>
+
     </section>
 
 
 
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
 
+    <script>
+        const firebaseConfig = {
+            databaseURL: 'https://ranking-costa-do-sol-default-rtdb.firebaseio.com/'
+
+        }
+        firebase.initializeApp(firebaseConfig)
+        const database = firebase.database()
+
+
+    </script>
     <script src="index.js"></script>
 </body>
 
