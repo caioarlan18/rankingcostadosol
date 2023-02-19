@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -121,33 +121,44 @@
 
     <!-- pontuação do ranking(nao editavel) -->
     <!-- categoria A -->
-    <section class="tabela">
+    <div class="desa">
+
+        <div class="drop1">
+            <ul class="dropA">
+                <li><a href="#">Etapa1</a></li>
+                <li><a href="#">Etapa2</a></li>
+                <li><a href="#">Etapa3</a></li>
+                <li><a href="#">Etapa4</a></li>
+                <li><a href="#">Etapa5</a></li>
+                <li><a href="#">Etapa6</a></li>
+                <li><a href="#">Total</a></li>
+            </ul>
+        </div>
         <div class="tabela-1">
-            <h1>Tabela de pontuação do ranking costa do sol - Categoria A</h1>
+            <h1>Etapa1</h1>
+            <table id="tabelaNaoEditavel" class="tabela">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Pontos</td>
+                </tr>
+            </table>
+
 
         </div>
 
-    </section>
-    <table id="tabelaNaoEditavel" class="tabela">
-        <tr>
-            <td class="esp">Nome</td>
-            <td class="esp">Pontos</td>
-        </tr>
-    </table>
 
-    <!-- categoria B -->
-    <section class="tabela2">
+        <!-- categoria B -->
         <div class="tabela1">
             <h1>Tabela de pontuação do ranking costa do sol - Categoria B</h1>
-
+            <table id="tabelaNaoEditavel2" class="tabela1">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Pontos</td>
+                </tr>
+            </table>
         </div>
-    </section>
-    <table id="tabelaNaoEditavel2" class="tabela1">
-        <tr>
-            <td class="esp">Nome</td>
-            <td class="esp">Pontos</td>
-        </tr>
-    </table>
+    </div>
+
     <!-- login de organizador -->
     <div class="back">
         <header class="hd">
@@ -448,8 +459,10 @@
                     tdNaoEditavel.textContent = row.value
 
 
+
                     td.textContent = row.chave
                     td.textContent = row.value
+
 
                     trNaoEditavel.appendChild(tdNaoEditavel);
                 }
@@ -523,11 +536,11 @@
 
                     const tdNaoEditavel = document.createElement('td');
                     tdNaoEditavel.textContent = row.chave
-                    tdNaoEditavel.textContent = row.value
 
 
-                    td.textContent = row.chave
+
                     td.textContent = row.value
+
 
                     trNaoEditavel.appendChild(tdNaoEditavel);
                 }
