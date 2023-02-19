@@ -273,6 +273,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
+        // tabela categoria A
         const salvar1 = document.querySelector('button.salvar1').addEventListener('click', async () => {
             let save1 = []
             let tabelaEditavel = document.getElementById('tabelaEditavel');
@@ -292,7 +293,7 @@
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
-
+            alert('Salvo com sucesso')
         })
 
         const docSnap = await getDoc(doc(db, "teste", "save1"));
@@ -333,6 +334,220 @@
             })
         }
 
+        // tabela categoria B
+        const salvar2 = document.querySelector('button.salvar2').addEventListener('click', async () => {
+            let save2 = []
+            let tabelaEditavel = document.getElementById('tabelaEditavel2');
+            let isFirst = true
+            for (let row of tabelaEditavel.rows) {
+                if (!isFirst) {
+                    let obj1 = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save2.push(obj1)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save2'), { save2 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap2 = await getDoc(doc(db, "teste", "save2"));
+        if (!docSnap2.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap2.data());
+            let tableValue = docSnap2.data().save2
+            tableValue.forEach((row) => {
+                var trEditavel2 = document.createElement("tr");
+                var td1Editavel2 = document.createElement('td');
+                var td2Editavel2 = document.createElement("td");
+                td1Editavel2.contentEditable = true;
+                td2Editavel2.contentEditable = true;
+                trEditavel2.appendChild(td1Editavel2);
+                trEditavel2.appendChild(td2Editavel2);
+                tabelaEditavel2.appendChild(trEditavel2);
+
+
+                var trNaoEditavel2 = document.createElement("tr");
+                var td1NaoEditavel2 = document.createElement('td');
+                var td2NaoEditavel2 = document.createElement("td");
+                td1NaoEditavel2.textContent = row.chave;
+                td2NaoEditavel2.textContent = row.value;
+                trNaoEditavel2.appendChild(td1NaoEditavel2);
+                trNaoEditavel2.appendChild(td2NaoEditavel2);
+                tabelaNaoEditavel2.appendChild(trNaoEditavel2);
+
+                var btnRemover = document.createElement("button");
+                btnRemover.addEventListener('click', () => {
+                    trEditavel2.remove();
+                    trNaoEditavel2.remove();
+                });
+                btnRemover.classList.add('remove')
+                trEditavel2.appendChild(btnRemover);
+            })
+        }
+
+        // chave categoria A
+
+        const salvar3 = document.querySelector('button.salvar3').addEventListener('click', async () => {
+            let save3 = []
+            let chavEditavel = document.getElementById('chavEditavel');
+            let isFirst = true
+            for (let row of chavEditavel.rows) {
+                if (!isFirst) {
+                    let obj1 = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText,
+
+                    }
+                    save3.push(obj1)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save3'), { save3 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap3 = await getDoc(doc(db, "teste", "save3"));
+        if (!docSnap3.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap3.data());
+            let tableValue = docSnap3.data().save3
+            tableValue.forEach((row) => {
+                const select = document.querySelector("select#option");
+                const chavEditavel = document.querySelector('table#chavEditavel');
+                const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel");
+                const tr = document.createElement('tr');
+                const trNaoEditavel = document.createElement('tr');
+                for (let i = 0; i < select.value; i++) {
+                    const td = document.createElement('td');
+                    td.contentEditable = true;
+                    td.addEventListener('input', (event) => {
+                        const index = Array.from(tr.children).indexOf(event.target);
+                        trNaoEditavel.children[index].textContent = event.target.textContent;
+                    });
+
+                    tr.appendChild(td);
+
+
+                    const tdNaoEditavel = document.createElement('td');
+                    tdNaoEditavel.textContent = row.chave
+                    tdNaoEditavel.textContent = row.value
+
+
+                    td.textContent = row.chave
+                    td.textContent = row.value
+
+                    trNaoEditavel.appendChild(tdNaoEditavel);
+                }
+
+                chavEditavel.appendChild(tr);
+                tabelaNaoEditavel.appendChild(trNaoEditavel);
+
+                let linhasAdicionadas = [];
+                linhasAdicionadas.push(tr);
+                linhasAdicionadas.push(trNaoEditavel);
+                const excluirTudo = document.querySelector("button.excluirtudo")
+                excluirTudo.addEventListener('click', () => {
+
+                    for (let i = 0; i < linhasAdicionadas.length; i++) {
+                        linhasAdicionadas[i].remove();
+                    }
+
+                    linhasAdicionadas = [];
+                });
+            })
+
+        }
+
+        // chave categoria B
+
+        const salvar4 = document.querySelector('button.salvar4').addEventListener('click', async () => {
+            let save4 = []
+            let chavEditavel2 = document.getElementById('chavEditavel2');
+            let isFirst = true
+            for (let row of chavEditavel2.rows) {
+                if (!isFirst) {
+                    let obj1 = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText,
+
+                    }
+                    save4.push(obj1)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save4'), { save4 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap4 = await getDoc(doc(db, "teste", "save4"));
+        if (!docSnap4.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap4.data());
+            let tableValue = docSnap4.data().save4
+            tableValue.forEach((row) => {
+                const select = document.querySelector("select#option1");
+                const chavEditavel = document.querySelector('table#chavEditavel2');
+                const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel2");
+                const tr = document.createElement('tr');
+                const trNaoEditavel = document.createElement('tr');
+                for (let i = 0; i < select.value; i++) {
+                    const td = document.createElement('td');
+                    td.contentEditable = true;
+                    td.addEventListener('input', (event) => {
+                        const index = Array.from(tr.children).indexOf(event.target);
+                        trNaoEditavel.children[index].textContent = event.target.textContent;
+                    });
+
+                    tr.appendChild(td);
+
+
+                    const tdNaoEditavel = document.createElement('td');
+                    tdNaoEditavel.textContent = row.chave
+                    tdNaoEditavel.textContent = row.value
+
+
+                    td.textContent = row.chave
+                    td.textContent = row.value
+
+                    trNaoEditavel.appendChild(tdNaoEditavel);
+                }
+
+                chavEditavel.appendChild(tr);
+                tabelaNaoEditavel.appendChild(trNaoEditavel);
+
+                let linhasAdicionadas = [];
+                linhasAdicionadas.push(tr);
+                linhasAdicionadas.push(trNaoEditavel);
+                const excluirTudo = document.querySelector("button.excluirtudo2")
+                excluirTudo.addEventListener('click', () => {
+
+                    for (let i = 0; i < linhasAdicionadas.length; i++) {
+                        linhasAdicionadas[i].remove();
+                    }
+
+                    linhasAdicionadas = [];
+                });
+            })
+
+        }
 
 
     </script>
