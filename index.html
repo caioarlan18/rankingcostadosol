@@ -369,6 +369,8 @@
                 var td2Editavel2 = document.createElement("td");
                 td1Editavel2.contentEditable = true;
                 td2Editavel2.contentEditable = true;
+                td1Editavel2.textContent = row.chave;
+                td2Editavel2.textContent = row.value;
                 trEditavel2.appendChild(td1Editavel2);
                 trEditavel2.appendChild(td2Editavel2);
                 tabelaEditavel2.appendChild(trEditavel2);
