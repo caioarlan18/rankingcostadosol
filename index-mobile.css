@@ -154,39 +154,31 @@
   display: block;
 }
 
-/* galeria de fotos */
-.tabela {
-  position: relative;
-  bottom: 120px;
+table.tabela {
   height: 50px;
   background-color: white;
-  border-top-right-radius: 30%;
-  border-top-left-radius: 30%;
+}
+div.tabela1 {
   margin-top: 100px;
 }
-.tabela1 {
+table.tabela1 {
   height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .tabela-1 h1 {
   text-align: center;
   font-family: montserrat;
   color: #3367d5;
-  position: relative;
-  top: 40px;
+  margin-top: 30px;
   width: 95%;
 }
 .tabela1 h1 {
   text-align: center;
   font-family: montserrat;
   color: #3367d5;
-
   width: 95%;
 }
-#tabelaNaoEditavel2 {
-  position: relative;
-  top: 2px;
-}
+
 /* login do organizador */
 
 .hd {
@@ -496,4 +488,29 @@ tr:nth-child(even) {
 .salvar4:hover {
   background-color: #3c9c4f;
   transition: 0, 3s;
+}
+/* tabela hidden etapas passadas */
+
+.drop1 {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.dropA {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.dropA li {
+  margin: 0 10px;
+}
+.dropA li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: montserrat;
 }
