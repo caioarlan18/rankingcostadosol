@@ -492,25 +492,26 @@ tr:nth-child(even) {
 /* tabela hidden etapas passadas */
 
 .drop1 {
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+  background-color: #e6e6e6;
 }
 .dropA {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 .dropA li {
-  margin: 0 10px;
-}
-.dropA li a {
-  color: #333;
+  width: 74px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  border-right: 1px solid #ccc;
+  color: #333333;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   font-family: montserrat;
+  justify-content: center;
 }
