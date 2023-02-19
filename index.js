@@ -86,6 +86,13 @@ tabelaEditavel.addEventListener('input', (e) => {
         celulaNaoEditavel.textContent = e.target.textContent;
     }
 });
+var teste = [{
+    chave: 'chave1',
+    pont: 'pont.value',
+    created: ''
+}]
+
+
 var addnew = document.querySelector("button.addnew");
 addnew.addEventListener('click', () => {
     var trEditavel = document.createElement("tr");
@@ -116,6 +123,9 @@ addnew.addEventListener('click', () => {
     trEditavel.appendChild(btnRemover);
 
 });
+
+
+
 
 
 // pontuaçao categoria B
