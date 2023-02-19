@@ -502,7 +502,7 @@ tr:nth-child(even) {
   padding: 0;
 }
 .dropA li {
-  width: 74px;
+  width: 14%;
   height: 38px;
   display: flex;
   align-items: center;
