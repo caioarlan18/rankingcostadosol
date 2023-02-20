@@ -156,7 +156,11 @@
 
 table.tabela {
   height: 50px;
-  background-color: white;
+  background-color: #e6e6e6;
+  width: 100%;
+}
+.eea {
+  display: none;
 }
 div.tabela1 {
   margin-top: 100px;
@@ -165,10 +169,17 @@ table.tabela1 {
   height: 50px;
   margin-bottom: 30px;
 }
-.tabela-1 h1 {
+.tabela-1 h1,
+.tabela-2 h1,
+.tabela-3 h1,
+.tabela-4 h1,
+.tabela-5 h1,
+.tabela-6 h1,
+.tabela-7 h1 {
   text-align: center;
   font-family: montserrat;
-  color: #3367d5;
+  font-size: 12px;
+  color: #333333;
   margin-top: 30px;
   width: 95%;
 }
@@ -314,9 +325,9 @@ table.tabela1 {
 
 /* tabela */
 table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .esp {
   color: #3367d5;
@@ -326,14 +337,18 @@ table {
   display: none;
 }
 td {
-  border: 2px solid #3367d5;
   padding: 8px;
   text-align: center;
   font-family: montserrat;
+  width: 50%;
+  font-size: 12px;
+  color: #808080;
 }
-
+tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 .remove {
   background-color: red;
@@ -495,7 +510,7 @@ tr:nth-child(even) {
   background-color: #e6e6e6;
 }
 .dropA {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -508,10 +523,52 @@ tr:nth-child(even) {
   align-items: center;
   background-color: #e6e6e6;
   border-right: 1px solid #ccc;
-  color: #333333;
+  color: #b3b3b3;
   text-decoration: none;
   font-size: 10px;
   font-weight: bold;
   font-family: montserrat;
   justify-content: center;
+  cursor: pointer;
+}
+.dropA li.active {
+  color: #333333;
+}
+
+.tabela-2,
+.tabela-3,
+.tabela-4,
+.tabela-5,
+.tabela-6,
+.tabela-7 {
+  display: none;
+}
+.bl {
+  display: block;
+}
+.catA {
+  text-align: center;
+  font-family: montserrat;
+  color: #3367d5;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 95%;
+}
+
+.e1 {
+  display: block;
+}
+.eh {
+  display: none;
+}
+.e2,
+.e3,
+.e4,
+.e5,
+.e6,
+.e7 {
+  display: none;
+}
+.ev {
+  display: table;
 }
