@@ -159,9 +159,10 @@ table.tabela {
   background-color: #e6e6e6;
   width: 100%;
 }
-.eea {
+.tabela-1 {
   display: none;
 }
+
 div.tabela1 {
   margin-top: 100px;
 }
@@ -183,10 +184,18 @@ table.tabela1 {
   margin-top: 30px;
   width: 95%;
 }
-.tabela1 h1 {
+.tabela2 h1,
+.tabela3 h1,
+.tabela4 h1,
+.tabela5 h1,
+.tabela6 h1,
+.tabela7 h1,
+.tabela8 h1 {
   text-align: center;
   font-family: montserrat;
-  color: #3367d5;
+  font-size: 12px;
+  color: #333333;
+  margin-top: 30px;
   width: 95%;
 }
 
@@ -534,7 +543,7 @@ tr:nth-child(even) {
 .dropA li.active {
   color: #333333;
 }
-
+.tabela-1,
 .tabela-2,
 .tabela-3,
 .tabela-4,
@@ -553,22 +562,70 @@ tr:nth-child(even) {
   margin-bottom: 30px;
   margin-top: 10px;
   width: 95%;
+  font-size: 30px;
 }
 
-.e1 {
+.dropB {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.dropB li {
+  width: 14%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  border-right: 1px solid #ccc;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: montserrat;
+  justify-content: center;
+  cursor: pointer;
+}
+.dropB li.active2 {
+  color: #333333;
+}
+
+h1.catB {
+  text-align: center;
+  font-family: montserrat;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 95%;
+  color: #3367d5;
+  font-size: 30px;
+}
+
+.tabela2,
+.tabela3,
+.tabela4,
+.tabela5,
+.tabela6,
+.tabela7,
+.tabela8 {
+  display: none;
+}
+.blb {
   display: block;
 }
-.eh {
-  display: none;
+
+#tabelaEditavel td,
+#tabelaEditavel2 td {
+  border: 1px solid #1055cc;
+  color: black;
+  font-weight: 600;
 }
-.e2,
-.e3,
-.e4,
-.e5,
-.e6,
-.e7 {
-  display: none;
-}
-.ev {
-  display: table;
+
+#chavEditavel td,
+#chavEditavel2 td {
+  border: 1px solid #1055cc;
+  width: 20%;
+  color: black;
+  font-weight: 600;
 }
