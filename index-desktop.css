@@ -83,8 +83,12 @@
   .submenuopen1 {
     display: block;
   }
+  .dropA li {
+    font-size: 15px;
+    cursor: pointer;
+  }
   table {
-    width: 50%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 280px) and (max-width: 653px) {
