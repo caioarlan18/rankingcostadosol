@@ -361,7 +361,7 @@ tr:nth-child(even) {
 }
 .remove {
   background-color: red;
-  padding: 10px 15px;
+  padding: 10px 13px;
   height: 50px;
   color: white;
   font-family: montserrat;
@@ -617,7 +617,7 @@ h1.catB {
 
 #tabelaEditavel td,
 #tabelaEditavel2 td {
-  border: 1px solid #1055cc;
+  border: 1px solid black;
   color: black;
   font-weight: 600;
 }
@@ -628,4 +628,10 @@ h1.catB {
   width: 20%;
   color: black;
   font-weight: 600;
+}
+#chavNaoEditavel td,
+#chavNaoEditavel2 td {
+  width: 20%;
+  color: black;
+  border: 1px solid black;
 }
