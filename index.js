@@ -7,6 +7,7 @@ var orgpage = document.querySelector("section.orgpage")
 var tabela = document.querySelector('table.tabela')
 var tabela2 = document.querySelector("section.tabela2")
 var tabela1 = document.querySelector('table.tabela1')
+var desa = document.querySelector("div.desa")
 // menu hamburguer
 function menu_hamburguer() {
     menu.classList.toggle('open')
@@ -25,9 +26,8 @@ function reg() {
     hd.classList.remove('orgopen')
     back.classList.remove("orgopen")
     orgpage.classList.remove("orgpageopen")
-    tabela.classList.add('htabela')
-    tabela2.classList.add('htabela')
-    tabela1.classList.add('htabela')
+
+    desa.classList.add('htabela')
 }
 
 function home() {
@@ -37,9 +37,8 @@ function home() {
     hd.classList.remove('orgopen')
     back.classList.remove("orgopen")
     orgpage.classList.remove("orgpageopen")
-    tabela.classList.remove('htabela')
-    tabela2.classList.remove('htabela')
-    tabela1.classList.remove('htabela')
+
+    desa.classList.remove('htabela')
 }
 function chav() {
     chave.classList.add('chaveopen')
@@ -48,9 +47,7 @@ function chav() {
     hd.classList.remove('orgopen')
     back.classList.remove("orgopen")
     orgpage.classList.remove("orgpageopen")
-    tabela.classList.add('htabela')
-    tabela2.classList.add('htabela')
-    tabela1.classList.add('htabela')
+    desa.classList.add('htabela')
 }
 
 // menu arrow(submenu home mobile e desktop)
@@ -267,9 +264,7 @@ function org() {
     chave.classList.remove('chaveopen')
     back.classList.add("orgopen")
     orgpage.classList.remove("orgpageopen")
-    tabela.classList.add('htabela')
-    tabela2.classList.add('htabela')
-    tabela1.classList.add('htabela')
+    desa.classList.add('htabela')
 }
 
 
@@ -301,3 +296,87 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
         senha.value = ''
     }
 })
+
+const menuItems = document.querySelectorAll("ul.dropA li");
+
+menuItems.forEach(item => {
+    item.addEventListener("click", function () {
+        menuItems.forEach(item => {
+            item.classList.remove("active");
+        });
+        this.classList.add("active");
+    });
+});
+
+var e11a = document.querySelector('div.tabela-1')
+var e12a = document.querySelector('div.tabela-2')
+var e13a = document.querySelector('div.tabela-3')
+var e14a = document.querySelector('div.tabela-4')
+var e15a = document.querySelector('div.tabela-5')
+var e16a = document.querySelector('div.tabela-6')
+var e17a = document.querySelector('div.tabela-7')
+
+
+function e1a() {
+    e11a.classList.remove('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.remove('bl')
+}
+function e2a() {
+    e11a.classList.add('eea')
+    e12a.classList.add('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.remove('bl')
+}
+function e3a() {
+    e11a.classList.add('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.add('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.remove('bl')
+}
+function e4a() {
+    e11a.classList.add('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.add('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.remove('bl')
+}
+function e5a() {
+    e11a.classList.add('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.add('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.remove('bl')
+}
+function e6a() {
+    e11a.classList.add('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.add('bl')
+    e17a.classList.remove('bl')
+}
+function e7a() {
+    e11a.classList.add('eea')
+    e12a.classList.remove('bl')
+    e13a.classList.remove('bl')
+    e14a.classList.remove('bl')
+    e15a.classList.remove('bl')
+    e16a.classList.remove('bl')
+    e17a.classList.add('bl')
+}
