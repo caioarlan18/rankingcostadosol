@@ -318,16 +318,17 @@ var e17a = document.querySelector('div.tabela-7')
 
 
 function e1a() {
-    e11a.classList.remove('eea')
+    e11a.classList.remove('bl')
     e12a.classList.remove('bl')
     e13a.classList.remove('bl')
     e14a.classList.remove('bl')
     e15a.classList.remove('bl')
     e16a.classList.remove('bl')
     e17a.classList.remove('bl')
+    e17a.classList.add('bl')
 }
 function e2a() {
-    e11a.classList.add('eea')
+    e11a.classList.remove('bl')
     e12a.classList.add('bl')
     e13a.classList.remove('bl')
     e14a.classList.remove('bl')
@@ -336,7 +337,7 @@ function e2a() {
     e17a.classList.remove('bl')
 }
 function e3a() {
-    e11a.classList.add('eea')
+    e11a.classList.remove('bl')
     e12a.classList.remove('bl')
     e13a.classList.add('bl')
     e14a.classList.remove('bl')
@@ -345,7 +346,7 @@ function e3a() {
     e17a.classList.remove('bl')
 }
 function e4a() {
-    e11a.classList.add('eea')
+    e11a.classList.remove('bl')
     e12a.classList.remove('bl')
     e13a.classList.remove('bl')
     e14a.classList.add('bl')
@@ -354,7 +355,7 @@ function e4a() {
     e17a.classList.remove('bl')
 }
 function e5a() {
-    e11a.classList.add('eea')
+    e11a.classList.remove('bl')
     e12a.classList.remove('bl')
     e13a.classList.remove('bl')
     e14a.classList.remove('bl')
@@ -363,7 +364,7 @@ function e5a() {
     e17a.classList.remove('bl')
 }
 function e6a() {
-    e11a.classList.add('eea')
+    e11a.classList.remove('bl')
     e12a.classList.remove('bl')
     e13a.classList.remove('bl')
     e14a.classList.remove('bl')
@@ -372,11 +373,100 @@ function e6a() {
     e17a.classList.remove('bl')
 }
 function e7a() {
-    e11a.classList.add('eea')
+    e11a.classList.add('bl')
     e12a.classList.remove('bl')
     e13a.classList.remove('bl')
     e14a.classList.remove('bl')
     e15a.classList.remove('bl')
     e16a.classList.remove('bl')
-    e17a.classList.add('bl')
+    e17a.classList.remove('bl')
+}
+
+
+// B
+
+const menuItems2 = document.querySelectorAll("ul.dropB li");
+
+menuItems2.forEach(item => {
+    item.addEventListener("click", function () {
+        menuItems2.forEach(item => {
+            item.classList.remove("active2");
+        });
+        this.classList.add("active2");
+    });
+});
+
+
+var e11b = document.querySelector('div.tabela2')
+var e12b = document.querySelector('div.tabela3')
+var e13b = document.querySelector('div.tabela4')
+var e14b = document.querySelector('div.tabela5')
+var e15b = document.querySelector('div.tabela6')
+var e16b = document.querySelector('div.tabela7')
+var e17b = document.querySelector('div.tabela8')
+
+
+function e1b() {
+    e11b.classList.remove('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
+    e17b.classList.add('blb')
+}
+function e2b() {
+    e11b.classList.remove('blb')
+    e12b.classList.add('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
+}
+function e3b() {
+    e11b.classList.remove('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.add('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
+}
+function e4b() {
+    e11b.classList.remove('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.add('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
+}
+function e5b() {
+    e11b.classList.remove('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.add('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
+}
+function e6b() {
+    e11b.classList.remove('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.add('blb')
+    e17b.classList.remove('blb')
+}
+function e7b() {
+    e11b.classList.add('blb')
+    e12b.classList.remove('blb')
+    e13b.classList.remove('blb')
+    e14b.classList.remove('blb')
+    e15b.classList.remove('blb')
+    e16b.classList.remove('blb')
+    e17b.classList.remove('blb')
 }
