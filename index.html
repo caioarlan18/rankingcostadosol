@@ -439,16 +439,40 @@
         <div class="orgpage-1">
 
             <h2>Editar chaves do torneio - Categoria A</h2>
-            <p>Número de pessoas na chave</p>
 
-            <select id="option">
-                <option value="2" class="option1">2</option>
-                <option value="3" class="option1">3</option>
-                <option value="4" class="option1">4</option>
-            </select>
-            <button class="addnew2">Criar chaves</button>
-            <button class="excluirtudo">Excluir tudo</button>
-            <button class="salvar3">Salvar</button>
+
+
+            <div class="cmode">
+
+                <form class="formone">
+                    <p class="centfn">
+                        <label for="jogador" class="addtxt">Adicionar jogador:</label>
+                        <input type="text" id="jogador" name="jogador">
+                        <button type="button" onclick="adicionarJogador()" class="addbtn">Adicionar</button>
+                    </p>
+                    <div class="fm1">
+                        <p class="centfn">
+                            <label for="jogadores_por_chave" class="jtxt">Jogadores por chave:</label>
+                            <input type="number" id="jogadores_por_chave" name="jogadores_por_chave">
+                        </p>
+                    </div>
+                </form>
+
+                <form>
+                    <ul id="jogadores"></ul>
+                    <div class="fm2">
+                        <button type="button" onclick="criarTabela()" class="ct">Criar Chaves</button>
+                        <button class="salvar3">Salvar</button>
+                        <button type="button" onclick="removerTodosJogadores()" class="rt">Remover chaves</button>
+
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
             <table id="chavEditavel">
                 <tr>
                     <td class="esp">1</td>
@@ -457,30 +481,30 @@
                     <td class="esp">4</td>
                 </tr>
             </table>
-        </div>
 
-        <div class="orgpage-1">
 
-            <h2>Editar chaves do torneio - Categoria B</h2>
-            <p>Número de pessoas na chave</p>
+            <div class="orgpage-1">
 
-            <select id="option1">
-                <option value="2" class="option1">2</option>
-                <option value="3" class="option1">3</option>
-                <option value="4" class="option1">4</option>
-            </select>
-            <button class="addnew3">Criar chaves</button>
-            <button class="excluirtudo2">Excluir tudo</button>
-            <button class="salvar4">Salvar</button>
-            <table id="chavEditavel2">
-                <tr>
-                    <td class="esp">1</td>
-                    <td class="esp">2</td>
-                    <td class="esp">3</td>
-                    <td class="esp">4</td>
-                </tr>
-            </table>
-        </div>
+                <h2>Editar chaves do torneio - Categoria B</h2>
+                <p>Número de pessoas na chave</p>
+
+                <select id="option1">
+                    <option value="2" class="option1">2</option>
+                    <option value="3" class="option1">3</option>
+                    <option value="4" class="option1">4</option>
+                </select>
+                <button class="addnew3">Criar chaves</button>
+                <button class="excluirtudo2">Excluir tudo</button>
+                <button class="salvar4">Salvar</button>
+                <table id="chavEditavel2">
+                    <tr>
+                        <td class="esp">1</td>
+                        <td class="esp">2</td>
+                        <td class="esp">3</td>
+                        <td class="esp">4</td>
+                    </tr>
+                </table>
+            </div>
 
     </section>
 
@@ -630,19 +654,20 @@
         }
 
         // chave categoria A
-
         const salvar3 = document.querySelector('button.salvar3').addEventListener('click', async () => {
             let save3 = []
-            let chavEditavel = document.getElementById('chavEditavel');
-            let isFirst = true
-            for (let row of chavEditavel.rows) {
-                if (!isFirst) {
-                    let obj1 = {
-                        chave: row.cells[0].innerText,
-                        value: row.cells[1].innerText,
+            let tabelaEditavel = document.getElementById('chavEditavel');
+            var tabelaOriginal = document.getElementById("chavEditavel");
+            var tabelaClonada = tabelaOriginal.cloneNode(true);
+            var tabelaDestino = document.getElementById("chavNaoEditavel");
 
+            let isFirst = true
+            for (let row of tabelaEditavel.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: tabelaDestino.innerHTML = tabelaClonada.innerHTML
                     }
-                    save3.push(obj1)
+                    save3.push(obj)
                 }
                 isFirst = false
             }
@@ -661,131 +686,13 @@
             console.log('Document data:', docSnap3.data());
             let tableValue = docSnap3.data().save3
             tableValue.forEach((row) => {
-                const select = document.querySelector("select#option");
-                const chavEditavel = document.querySelector('table#chavEditavel');
-                const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel");
-                const tr = document.createElement('tr');
-                const trNaoEditavel = document.createElement('tr');
-                for (let i = 0; i < select.value; i++) {
-                    const td = document.createElement('td');
-                    td.contentEditable = true;
-                    td.addEventListener('input', (event) => {
-                        const index = Array.from(tr.children).indexOf(event.target);
-                        trNaoEditavel.children[index].textContent = event.target.textContent;
-                    });
-
-                    tr.appendChild(td);
-
-
-                    const tdNaoEditavel = document.createElement('td');
-                    tdNaoEditavel.textContent = row.chave
-                    tdNaoEditavel.textContent = row.value
 
 
 
-                    td.textContent = row.chave
-                    td.textContent = row.value
-
-
-                    trNaoEditavel.appendChild(tdNaoEditavel);
-                }
-
-                chavEditavel.appendChild(tr);
-                tabelaNaoEditavel.appendChild(trNaoEditavel);
-
-                let linhasAdicionadas = [];
-                linhasAdicionadas.push(tr);
-                linhasAdicionadas.push(trNaoEditavel);
-                const excluirTudo = document.querySelector("button.excluirtudo")
-                excluirTudo.addEventListener('click', () => {
-
-                    for (let i = 0; i < linhasAdicionadas.length; i++) {
-                        linhasAdicionadas[i].remove();
-                    }
-
-                    linhasAdicionadas = [];
-                });
             })
-
         }
 
-        // chave categoria B
 
-        const salvar4 = document.querySelector('button.salvar4').addEventListener('click', async () => {
-            let save4 = []
-            let chavEditavel2 = document.getElementById('chavEditavel2');
-            let isFirst = true
-            for (let row of chavEditavel2.rows) {
-                if (!isFirst) {
-                    let obj1 = {
-                        chave: row.cells[0].innerText,
-                        value: row.cells[1].innerText,
-
-                    }
-                    save4.push(obj1)
-                }
-                isFirst = false
-            }
-            try {
-                const docRef = await setDoc(doc(db, 'teste', 'save4'), { save4 });
-            } catch (e) {
-                console.error("Error adding document: ", e);
-            }
-            alert('Salvo com sucesso')
-        })
-
-        const docSnap4 = await getDoc(doc(db, "teste", "save4"));
-        if (!docSnap4.exists) {
-            console.log('No such document!');
-        } else {
-            console.log('Document data:', docSnap4.data());
-            let tableValue = docSnap4.data().save4
-            tableValue.forEach((row) => {
-                const select = document.querySelector("select#option1");
-                const chavEditavel = document.querySelector('table#chavEditavel2');
-                const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel2");
-                const tr = document.createElement('tr');
-                const trNaoEditavel = document.createElement('tr');
-                for (let i = 0; i < select.value; i++) {
-                    const td = document.createElement('td');
-                    td.contentEditable = true;
-                    td.addEventListener('input', (event) => {
-                        const index = Array.from(tr.children).indexOf(event.target);
-                        trNaoEditavel.children[index].textContent = event.target.textContent;
-                    });
-
-                    tr.appendChild(td);
-
-
-                    const tdNaoEditavel = document.createElement('td');
-                    tdNaoEditavel.textContent = row.chave
-
-
-
-                    td.textContent = row.value
-
-
-                    trNaoEditavel.appendChild(tdNaoEditavel);
-                }
-
-                chavEditavel.appendChild(tr);
-                tabelaNaoEditavel.appendChild(trNaoEditavel);
-
-                let linhasAdicionadas = [];
-                linhasAdicionadas.push(tr);
-                linhasAdicionadas.push(trNaoEditavel);
-                const excluirTudo = document.querySelector("button.excluirtudo2")
-                excluirTudo.addEventListener('click', () => {
-
-                    for (let i = 0; i < linhasAdicionadas.length; i++) {
-                        linhasAdicionadas[i].remove();
-                    }
-
-                    linhasAdicionadas = [];
-                });
-            })
-
-        }
 
 
     </script>
