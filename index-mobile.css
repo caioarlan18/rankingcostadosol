@@ -322,10 +322,10 @@ table.tabela1 {
 }
 .orgpage-1 h2 {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-align: center;
   font-family: montserrat;
-  font-size: 17px;
+  font-size: 20px;
   color: #3367d5;
 }
 .orgpageopen {
@@ -488,22 +488,21 @@ tr:nth-child(even) {
 /* botão de salvar */
 .salvar1,
 .salvar2,
-.salvar3,
 .salvar4 {
   background-color: #33b14d;
   padding: 10px 10px;
   width: 100px;
   justify-content: center;
   color: white;
+  margin-top: 10px;
+  display: flex;
   font-size: 15px;
   font-family: montserrat;
   font-weight: 600;
   border: 0;
-  display: flex;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 15px;
 }
 
 .salvar1:hover,
@@ -621,7 +620,8 @@ h1.catB {
   color: black;
   font-weight: 600;
 }
-
+#chavEditavel {
+}
 #chavEditavel td,
 #chavEditavel2 td {
   border: 1px solid #1055cc;
@@ -634,4 +634,149 @@ h1.catB {
   width: 20%;
   color: black;
   border: 1px solid black;
+}
+
+.cmode p {
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.addname {
+  background-color: #3367d5;
+  height: 30px;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.finish {
+  background-color: #33b14d;
+  height: 30px;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.adesv {
+  display: none;
+}
+
+.removebtn {
+  width: 100px;
+  background-color: #c92c36;
+  font-family: montserrat;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.listyle {
+  font-family: montserrat;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.addbtn {
+  background-color: #3367d5;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addtxt {
+  font-family: montserrat;
+  font-weight: 600;
+  margin-left: 15px;
+}
+#jogador {
+  width: 70px;
+  margin-left: 10px;
+}
+.centfn {
+  text-align: center;
+}
+.formone {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 10px;
+}
+
+.jtxt {
+  font-family: montserrat;
+  font-weight: 600;
+  margin-left: 15px;
+  color: #3367d5;
+}
+
+#jogadores_por_chave {
+  width: 30px;
+  margin-left: 10px;
+}
+
+#jogadores {
+  text-align: center;
+  background-color: #b3b3b3;
+  border-radius: 10px;
+  width: 80%;
+}
+.fm1 {
+  margin-top: 20px;
+}
+.fm2 {
+  margin-top: 60px;
+  display: flex;
+}
+
+.salvar3 {
+  background-color: #33b14d;
+  height: 30px;
+  width: 100px;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 12px;
+}
+.ct {
+  width: 100px;
+  background-color: #3367d5;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.rt {
+  width: 100px;
+  background-color: #e7260c;
+  color: white;
+  font-family: montserrat;
+  font-weight: 600;
+  border: 0;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
 }
