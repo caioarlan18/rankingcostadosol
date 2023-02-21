@@ -170,47 +170,6 @@ addnewb.addEventListener('click', () => {
 
 // chave categoria A
 
-function criarNovaLinha() {
-    const select = document.querySelector("select#option");
-    const chavEditavel = document.querySelector('table#chavEditavel');
-    const tabelaNaoEditavel = document.querySelector("table#chavNaoEditavel");
-    const tr = document.createElement('tr');
-    const trNaoEditavel = document.createElement('tr');
-    for (let i = 0; i < select.value; i++) {
-        const td = document.createElement('td');
-        td.contentEditable = true;
-        td.addEventListener('input', (event) => {
-            const index = Array.from(tr.children).indexOf(event.target);
-            trNaoEditavel.children[index].textContent = event.target.textContent;
-        });
-
-        tr.appendChild(td);
-
-
-        const tdNaoEditavel = document.createElement('td');
-        tdNaoEditavel.textContent = td.textContent;
-        trNaoEditavel.appendChild(tdNaoEditavel);
-    }
-
-    chavEditavel.appendChild(tr);
-    tabelaNaoEditavel.appendChild(trNaoEditavel);
-
-
-    let linhasAdicionadas = [];
-    linhasAdicionadas.push(tr);
-    linhasAdicionadas.push(trNaoEditavel);
-    const excluirTudo = document.querySelector("button.excluirtudo")
-    excluirTudo.addEventListener('click', () => {
-
-        for (let i = 0; i < linhasAdicionadas.length; i++) {
-            linhasAdicionadas[i].remove();
-        }
-
-        linhasAdicionadas = [];
-    });
-}
-const addnew2 = document.querySelector('button.addnew2');
-addnew2.addEventListener('click', criarNovaLinha);
 
 
 
@@ -469,4 +428,117 @@ function e7b() {
     e15b.classList.remove('blb')
     e16b.classList.remove('blb')
     e17b.classList.remove('blb')
+}
+
+// checkbox
+
+
+
+
+
+var jogadores = [];
+
+function adicionarJogador() {
+    var jogadorInput = document.getElementById("jogador");
+    var jogador = jogadorInput.value.trim();
+    if (jogador !== "") {
+        jogadores.push(jogador);
+        jogadorInput.value = "";
+        renderizarJogadores();
+        jogadorInput.focus()
+    } else {
+        alert('Preencha o campo')
+    }
+
+}
+
+function renderizarJogadores() {
+    var jogadoresList = document.getElementById("jogadores");
+    jogadoresList.innerHTML = "";
+
+    for (var i = 0; i < jogadores.length; i++) {
+        var jogador = document.createElement("li");
+        jogador.classList.add('listyle')
+        jogador.setAttribute("id", "jogador-" + (i + 1));
+        var jogadorNome = document.createElement("span");
+        jogadorNome.innerHTML = jogadores[i];
+        var removerBotao = document.createElement("button");
+        removerBotao.classList.add('removebtn')
+        removerBotao.setAttribute("onclick", "removerJogador(" + (i + 1) + ")");
+        removerBotao.innerHTML = "Remover";
+        jogador.appendChild(jogadorNome);
+        jogador.appendChild(removerBotao);
+        jogadoresList.appendChild(jogador);
+    }
+}
+
+function removerJogador(id) {
+    jogadores.splice(id - 1, 1);
+    renderizarJogadores();
+}
+
+function criarTabela() {
+    var jogadores_por_chave = document.getElementById("jogadores_por_chave").value;
+    var num_jogadores = jogadores.length;
+    var num_chaves = Math.ceil(num_jogadores / jogadores_por_chave);
+
+    // Randomiza a lista de jogadores
+    jogadores.sort(function () { return Math.random() - 0.5; });
+
+    var tabela = document.getElementById("chavEditavel");
+    var jogadoresList = document.getElementById("jogadores");
+
+    if (jogadores_por_chave !== '') {
+        for (var i = 0; i < num_jogadores; i++) {
+            var jogador = document.createElement("li");
+            jogador.classList.add('listyle')
+            jogador.setAttribute("id", "jogador-" + (i + 1));
+            var jogadorNome = document.createElement("span");
+            jogadorNome.innerHTML = jogadores[i];
+            var removerBotao = document.createElement("button");
+            removerBotao.classList.add('removebtn')
+            removerBotao.setAttribute("onclick", "removerJogador(" + (i + 1) + ")");
+            removerBotao.innerHTML = "Remover";
+            jogador.appendChild(jogadorNome);
+            jogador.appendChild(removerBotao);
+            jogadoresList.appendChild(jogador);
+        }
+
+        for (var i = 0; i < num_chaves; i++) {
+            var row = tabela.insertRow();
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = "Chave " + (i + 1);
+            var cell2 = row.insertCell(1);
+            var tabelaJogadores = document.createElement("table");
+            tabelaJogadores.setAttribute("id", "tabela-jogadores-" + (i + 1));
+            cell2.appendChild(tabelaJogadores);
+            var jogadoresChave = jogadores.slice(i * jogadores_por_chave, (i + 1) * jogadores_por_chave);
+            for (var j = 0; j < jogadoresChave.length; j++) {
+                var row = tabelaJogadores.insertRow();
+                var cell1 = row.insertCell(0);
+                cell1.innerHTML = (i * jogadores_por_chave + j + 1) + ".";
+                var cell2 = row.insertCell(1);
+                cell2.innerHTML = jogadoresChave[j];
+            }
+
+        }
+        jogadores = []
+        jogadoresList.innerHTML = "";
+
+    } else if (jogadores_por_chave == '') {
+        alert("Preencha o campo 'Jogadores por chave'")
+    } else {
+        alert('erro')
+    }
+
+
+
+}
+function removerTodosJogadores() {
+    var tabela = document.getElementById("chavEditavel");
+    var num_chaves = tabela.rows.length - 1; // subtrai 1 para ignorar a linha do cabeçalho
+
+    for (var i = num_chaves; i >= 1; i--) {
+        tabela.deleteRow(i);
+    }
 }
