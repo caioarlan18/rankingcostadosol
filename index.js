@@ -510,6 +510,7 @@ function criarTabela() {
             cell1.innerHTML = "Chave " + (i + 1);
             var cell2 = row.insertCell(1);
             var tabelaJogadores = document.createElement("table");
+            tabelaJogadores.contentEditable = true
             tabelaJogadores.setAttribute("id", "tabela-jogadores-" + (i + 1));
             cell2.appendChild(tabelaJogadores);
             var jogadoresChave = jogadores.slice(i * jogadores_por_chave, (i + 1) * jogadores_por_chave);
