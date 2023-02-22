@@ -445,16 +445,18 @@
             <div class="cmode">
 
                 <form class="formone">
-                    <p class="centfn">
+                    <div class="fm">
                         <label for="jogador" class="addtxt">Adicionar jogador:</label>
-                        <input type="text" id="jogador" name="jogador">
-                        <button type="button" onclick="adicionarJogador()" class="addbtn">Adicionar</button>
-                    </p>
+                        <div class="fmh">
+                            <input type="text" id="jogador" name="jogador">
+                            <button type="button" onclick="adicionarJogador()" class="addbtn">Adicionar</button>
+                        </div>
+                    </div>
                     <div class="fm1">
-                        <p class="centfn">
-                            <label for="jogadores_por_chave" class="jtxt">Jogadores por chave:</label>
-                            <input type="number" id="jogadores_por_chave" name="jogadores_por_chave">
-                        </p>
+
+                        <label for="jogadores_por_chave" class="jtxt">Jogadores por chave:</label>
+                        <input type="number" id="jogadores_por_chave" name="jogadores_por_chave">
+
                     </div>
                 </form>
 
@@ -469,9 +471,9 @@
                     </div>
 
                 </form>
+
+
             </div>
-
-
 
             <table id="chavEditavel">
                 <tr>
@@ -481,30 +483,30 @@
                     <td class="esp">4</td>
                 </tr>
             </table>
+        </div>
 
+        <div class="orgpage-1">
 
-            <div class="orgpage-1">
+            <h2>Editar chaves do torneio - Categoria B</h2>
+            <p>Número de pessoas na chave</p>
 
-                <h2>Editar chaves do torneio - Categoria B</h2>
-                <p>Número de pessoas na chave</p>
-
-                <select id="option1">
-                    <option value="2" class="option1">2</option>
-                    <option value="3" class="option1">3</option>
-                    <option value="4" class="option1">4</option>
-                </select>
-                <button class="addnew3">Criar chaves</button>
-                <button class="excluirtudo2">Excluir tudo</button>
-                <button class="salvar4">Salvar</button>
-                <table id="chavEditavel2">
-                    <tr>
-                        <td class="esp">1</td>
-                        <td class="esp">2</td>
-                        <td class="esp">3</td>
-                        <td class="esp">4</td>
-                    </tr>
-                </table>
-            </div>
+            <select id="option1">
+                <option value="2" class="option1">2</option>
+                <option value="3" class="option1">3</option>
+                <option value="4" class="option1">4</option>
+            </select>
+            <button class="addnew3">Criar chaves</button>
+            <button class="excluirtudo2">Excluir tudo</button>
+            <button class="salvar4">Salvar</button>
+            <table id="chavEditavel2">
+                <tr>
+                    <td class="esp">1</td>
+                    <td class="esp">2</td>
+                    <td class="esp">3</td>
+                    <td class="esp">4</td>
+                </tr>
+            </table>
+        </div>
 
     </section>
 
@@ -655,6 +657,7 @@
 
         // chave categoria A
         const salvar3 = document.querySelector('button.salvar3').addEventListener('click', async () => {
+            event.preventDefault()
             let save3 = []
             let tabelaEditavel = document.getElementById('chavEditavel');
             var tabelaOriginal = document.getElementById("chavEditavel");
@@ -687,7 +690,8 @@
             let tableValue = docSnap3.data().save3
             tableValue.forEach((row) => {
 
-
+                var tabelaDestino = document.getElementById("chavNaoEditavel");
+                tabelaDestino.innerHTML = todasAsCelulas
 
             })
         }
