@@ -63,7 +63,11 @@
             <a href="https://www.instagram.com/tmprogressocabofrio/" class="submenu1">Instagram</a>
             <a href="https://www.facebook.com/tmprogresso.cabofrio.5" class="submenu2">Facebook</a>
             <li><a href="#" onclick="reg()">Regulamentos</a></li>
-            <li><a href="#" onclick="chav()">Chaveamento</a></li>
+            <li><a href="#" onclick="subchavv()">Chaveamento</a></li>
+            <div class="subglob">
+                <li><a href="#" onclick="chav()" class="subchav1">Categoria A</a></li>
+                <li><a href="#" onclick="chavB()" class="subchav2">Categoria B</a></li>
+            </div>
             <li><a href="#" onclick="org()">Entrar como organizador</a></li>
         </ul>
     </nav>
@@ -88,32 +92,129 @@
         </div>
     </section>
 
-    <!-- chaveamento -->
+    <!-- chaveamento A -->
 
     <section class="chav">
-        <div class="chav-1">
-            <h1>Chaveamento - Categoria A</h1>
+
+        <div class="tabela-10">
+            <div class="chav-1">
+                <h1>Chaveamento - Categoria A</h1>
+            </div>
+            <table id="chavNaoEditavel">
+                <tr>
+                    <td class="esp">1</td>
+                    <td class="esp">2</td>
+                </tr>
+
+            </table>
         </div>
-        <table id="chavNaoEditavel">
-            <tr>
-                <td class="esp">1</td>
-                <td class="esp">2</td>
-            </tr>
+        <div class="tabela-10">
+            <h1>Oitavas de final - Categoria A</h1>
+            <table id="tabelaNaoEditavel10" class="tabela10">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
 
-        </table>
 
-        <div class="chav-1">
-            <h1>Chaveamento - Categoria B</h1>
         </div>
-        <table id="chavNaoEditavel2">
-            <tr>
-                <td class="esp">1</td>
-                <td class="esp">2</td>
-            </tr>
+        <div class="tabela-10">
+            <h1>Quartas de final - Categoria A</h1>
+            <table id="tabelaNaoEditavel11" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
 
-        </table>
+
+        </div>
+        <div class="tabela-10">
+            <h1>Semifinal - Categoria A</h1>
+            <table id="tabelaNaoEditavel12" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="tabela-10">
+            <h1>Final - Categoria A</h1>
+            <table id="tabelaNaoEditavel13" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+
     </section>
 
+    <!-- chaveamento B -->
+    <section class="chav2">
+        <div class="tabela-10">
+            <div class="chav-1">
+                <h1>Chaveamento - Categoria B</h1>
+            </div>
+            <table id="chavNaoEditavel2">
+                <tr>
+                    <td class="esp">1</td>
+                    <td class="esp">2</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="tabela-10">
+            <h1>Oitavas de final - Categoria B</h1>
+            <table id="tabelaNaoEditavel20" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="tabela-10">
+            <h1>Quartas de final - Categoria B</h1>
+            <table id="tabelaNaoEditavel21" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="tabela-10">
+            <h1>Semfinal - Categoria B</h1>
+            <table id="tabelaNaoEditavel22" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="tabela-10">
+            <h1>Final - Categoria B</h1>
+            <table id="tabelaNaoEditavel23" class="tabela">
+                <tr>
+                    <td>Nome</td>
+                    <td>Nome</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </section>
 
     <!-- pontuação do ranking(nao editavel) -->
     <!-- categoria A -->
@@ -479,30 +580,157 @@
                 </tr>
             </table>
         </div>
-
         <div class="orgpage-1">
-
             <h2>Editar chaves do torneio - Categoria B</h2>
-            <p>Número de pessoas na chave</p>
+            <div class="cmode">
 
-            <select id="option1">
-                <option value="2" class="option1">2</option>
-                <option value="3" class="option1">3</option>
-                <option value="4" class="option1">4</option>
-            </select>
-            <button class="addnew3">Criar chaves</button>
-            <button class="excluirtudo2">Excluir tudo</button>
-            <button class="salvar4">Salvar</button>
-            <table id="chavEditavel2">
+                <form class="formone">
+                    <div class="fm">
+                        <p class="centfn">
+                            <label for="jogador" class="addtxt">Adicionar jogador:</label>
+                            <input type="text" id="jogador2" name="jogador">
+                            <button type="button" onclick="adicionarJogador2()" class="addbtn">Adicionar</button>
+                        </p>
+                    </div>
+                    <div class="fm1">
+
+                        <label for="jogadores_por_chave" class="jtxt">Jogadores por chave:</label>
+                        <input type="number" id="jogadores_por_chave2" name="jogadores_por_chave">
+
+                    </div>
+                </form>
+
+                <form>
+                    <ul id="jogadores2"></ul>
+                    <div class="fm2">
+                        <button type="button" onclick="criarTabela2()" class="ct">Criar Chaves</button>
+                        <button class="salvar3">Salvar</button>
+                        <button type="button" onclick="removerTodosJogadores2()" class="rt">Remover chaves</button>
+                    </div>
+                </form>
+                <table id="chavEditavel2">
+                    <tr>
+                        <td class="esp">1</td>
+                        <td class="esp">2</td>
+
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="orgpage-10">
+            <h2>Editar oitavas de final - Categoria A</h2>
+            <button class="addnew10">adicionar à tabela</button>
+            <button class="salvar10">Salvar</button>
+            <table id="tabelaEditavel10">
                 <tr>
-                    <td class="esp">1</td>
-                    <td class="esp">2</td>
-                    <td class="esp">3</td>
-                    <td class="esp">4</td>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
                 </tr>
+
+            </table>
+
+
+        </div>
+        <div class="orgpage-11">
+            <h2>Editar quartas de final - Categoria A</h2>
+            <button class="addnew11">adicionar à tabela</button>
+            <button class="salvar11">Salvar</button>
+            <table id="tabelaEditavel11">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="orgpage-12">
+            <h2>Editar semifinal - Categoria A</h2>
+            <button class="addnew12">adicionar à tabela</button>
+            <button class="salvar12">Salvar</button>
+            <table id="tabelaEditavel12">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="orgpage-13">
+            <h2>Editar Final - Categoria A</h2>
+            <button class="addnew13">adicionar à tabela</button>
+            <button class="salvar13">Salvar</button>
+            <table id="tabelaEditavel13">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <!-- oitavas B -->
+
+        <div class="orgpage-20">
+            <h2>Editar oitavas de final - Categoria B</h2>
+            <button class="addnew20">adicionar à tabela</button>
+            <button class="salvar20">Salvar</button>
+            <table id="tabelaEditavel20">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
             </table>
         </div>
+        <div class="orgpage-21">
+            <h2>Editar quartas de final - Categoria B</h2>
+            <button class="addnew21">adicionar à tabela</button>
+            <button class="salvar21">Salvar</button>
+            <table id="tabelaEditavel21">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
 
+            </table>
+
+
+        </div>
+        <div class="orgpage-22">
+            <h2>Editar semfinal - Categoria B</h2>
+            <button class="addnew22">adicionar à tabela</button>
+            <button class="salvar22">Salvar</button>
+            <table id="tabelaEditavel22">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="orgpage-23">
+            <h2>Editar final - Categoria B</h2>
+            <button class="addnew23">adicionar à tabela</button>
+            <button class="salvar23">Salvar</button>
+            <table id="tabelaEditavel23">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Nome</td>
+                </tr>
+
+            </table>
+
+
+        </div>
     </section>
 
 
@@ -651,19 +879,17 @@
         }
 
         // chave categoria A
-        const salvar3 = document.querySelector('button.salvar3').addEventListener('click', async () => {
-            event.preventDefault()
-            let save3 = []
-            let tabelaEditavel = document.getElementById('chavEditavel');
-            var tabelaOriginal = document.getElementById("chavEditavel");
-            var tabelaClonada = tabelaOriginal.cloneNode(true);
-            var tabelaDestino = document.getElementById("chavNaoEditavel");
 
+        // oitavas a
+        const salvar10 = document.querySelector('button.salvar10').addEventListener('click', async () => {
+            let save3 = []
+            let tabelaEditavel10 = document.getElementById('tabelaEditavel10');
             let isFirst = true
             for (let row of tabelaEditavel.rows) {
                 if (!isFirst) {
                     let obj = {
-                        chave: tabelaDestino.innerHTML = tabelaClonada.innerHTML
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
                     }
                     save3.push(obj)
                 }
@@ -677,22 +903,475 @@
             alert('Salvo com sucesso')
         })
 
-        const docSnap3 = await getDoc(doc(db, "teste", "save3"));
-        if (!docSnap3.exists) {
+        const docSnap10 = await getDoc(doc(db, "teste", "save3"));
+        if (!docSnap10.exists) {
             console.log('No such document!');
         } else {
-            console.log('Document data:', docSnap3.data());
-            let tableValue = docSnap3.data().save3
+            console.log('Document data:', docSnap10.data());
+            let tableValue = docSnap10.data().save3
             tableValue.forEach((row) => {
+                var trEditavel10 = document.createElement("tr");
+                var td1Editavel10 = document.createElement('td');
+                var td2Editavel10 = document.createElement("td");
+                td1Editavel10.contentEditable = true;
+                td2Editavel10.contentEditable = true;
+                td1Editavel10.textContent = row.chave
+                td2Editavel10.textContent = row.value
+                trEditavel10.appendChild(td1Editavel10);
+                trEditavel10.appendChild(td2Editavel10);
+                tabelaEditavel10.appendChild(trEditavel10);
 
-                var tabelaDestino = document.getElementById("chavNaoEditavel");
-                tabelaDestino.innerHTML = todasAsCelulas
 
+                var trNaoEditavel10 = document.createElement("tr");
+                var td1NaoEditavel10 = document.createElement('td');
+                var td2NaoEditavel10 = document.createElement("td");
+                td1NaoEditavel10.textContent = row.chave;
+                td2NaoEditavel10.textContent = row.value;
+                trNaoEditavel10.appendChild(td1NaoEditavel10);
+                trNaoEditavel10.appendChild(td2NaoEditavel10);
+                tabelaNaoEditavel10.appendChild(trNaoEditavel10);
+
+                var btnRemover10 = document.createElement("button");
+                btnRemover10.addEventListener('click', () => {
+                    trEditavel10.remove();
+                    trNaoEditavel10.remove();
+                });
+                btnRemover10.classList.add('remove')
+                trEditavel10.appendChild(btnRemover10);
             })
         }
 
+        // quartas A
+
+        const salvar11 = document.querySelector('button.salvar11').addEventListener('click', async () => {
+            let save4 = []
+            let tabelaEditavel11 = document.getElementById('tabelaEditavel11');
+            let isFirst = true
+            for (let row of tabelaEditavel11.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save4.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save4'), { save4 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap11 = await getDoc(doc(db, "teste", "save4"));
+        if (!docSnap11.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap11.data());
+            let tableValue = docSnap11.data().save4
+            tableValue.forEach((row) => {
+                var trEditavel11 = document.createElement("tr");
+                var td1Editavel11 = document.createElement('td');
+                var td2Editavel11 = document.createElement("td");
+                td1Editavel11.contentEditable = true;
+                td2Editavel11.contentEditable = true;
+                td1Editavel11.textContent = row.chave
+                td2Editavel11.textContent = row.value
+                trEditavel11.appendChild(td1Editavel11);
+                trEditavel11.appendChild(td2Editavel11);
+                tabelaEditavel11.appendChild(trEditavel11);
 
 
+                var trNaoEditavel11 = document.createElement("tr");
+                var td1NaoEditavel11 = document.createElement('td');
+                var td2NaoEditavel11 = document.createElement("td");
+                td1NaoEditavel11.textContent = row.chave;
+                td2NaoEditavel11.textContent = row.value;
+                trNaoEditavel11.appendChild(td1NaoEditavel11);
+                trNaoEditavel11.appendChild(td2NaoEditavel11);
+                tabelaNaoEditavel11.appendChild(trNaoEditavel11);
+
+                var btnRemover11 = document.createElement("button");
+                btnRemover11.addEventListener('click', () => {
+                    trEditavel11.remove();
+                    trNaoEditavel11.remove();
+                });
+                btnRemover11.classList.add('remove')
+                trEditavel11.appendChild(btnRemover11);
+            })
+        }
+
+        // semifinal A
+
+        const salvar12 = document.querySelector('button.salvar12').addEventListener('click', async () => {
+            let save5 = []
+            let tabelaEditavel12 = document.getElementById('tabelaEditavel12');
+            let isFirst = true
+            for (let row of tabelaEditavel12.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save5.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save5'), { save5 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap12 = await getDoc(doc(db, "teste", "save5"));
+        if (!docSnap12.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap12.data());
+            let tableValue = docSnap12.data().save5
+            tableValue.forEach((row) => {
+                var trEditavel12 = document.createElement("tr");
+                var td1Editavel12 = document.createElement('td');
+                var td2Editavel12 = document.createElement("td");
+                td1Editavel12.contentEditable = true;
+                td2Editavel12.contentEditable = true;
+                td1Editavel12.textContent = row.chave;
+                td2Editavel12.textContent = row.value;
+                trEditavel12.appendChild(td1Editavel12);
+                trEditavel12.appendChild(td2Editavel12);
+                tabelaEditavel12.appendChild(trEditavel12);
+
+
+                var trNaoEditavel12 = document.createElement("tr");
+                var td1NaoEditavel12 = document.createElement('td');
+                var td2NaoEditavel12 = document.createElement("td");
+                td1NaoEditavel12.textContent = row.chave;
+                td2NaoEditavel12.textContent = row.value;
+                trNaoEditavel12.appendChild(td1NaoEditavel12);
+                trNaoEditavel12.appendChild(td2NaoEditavel12);
+                tabelaNaoEditavel12.appendChild(trNaoEditavel12);
+
+                var btnRemover12 = document.createElement("button");
+                btnRemover12.addEventListener('click', () => {
+                    trEditavel12.remove();
+                    trNaoEditavel12.remove();
+                });
+                btnRemover12.classList.add('remove')
+                trEditavel12.appendChild(btnRemover12);
+            })
+        }
+
+        // final A
+
+        const salvar13 = document.querySelector('button.salvar13').addEventListener('click', async () => {
+            let save6 = []
+            let tabelaEditavel13 = document.getElementById('tabelaEditavel13');
+            let isFirst = true
+            for (let row of tabelaEditavel13.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save6.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save6'), { save6 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap13 = await getDoc(doc(db, "teste", "save6"));
+        if (!docSnap13.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap13.data());
+            let tableValue = docSnap13.data().save6
+            tableValue.forEach((row) => {
+                var trEditavel13 = document.createElement("tr");
+                var td1Editavel13 = document.createElement('td');
+                var td2Editavel13 = document.createElement("td");
+                td1Editavel13.contentEditable = true;
+                td2Editavel13.contentEditable = true;
+                td1Editavel13.textContent = row.chave;
+                td2Editavel13.textContent = row.value;
+                trEditavel13.appendChild(td1Editavel13);
+                trEditavel13.appendChild(td2Editavel13);
+                tabelaEditavel13.appendChild(trEditavel13);
+
+
+                var trNaoEditavel13 = document.createElement("tr");
+                var td1NaoEditavel13 = document.createElement('td');
+                var td2NaoEditavel13 = document.createElement("td");
+                td1NaoEditavel13.textContent = row.chave;
+                td2NaoEditavel13.textContent = row.value;
+                trNaoEditavel13.appendChild(td1NaoEditavel13);
+                trNaoEditavel13.appendChild(td2NaoEditavel13);
+                tabelaNaoEditavel13.appendChild(trNaoEditavel13);
+
+                var btnRemover13 = document.createElement("button");
+                btnRemover13.addEventListener('click', () => {
+                    trEditavel13.remove();
+                    trNaoEditavel13.remove();
+                });
+                btnRemover13.classList.add('remove')
+                trEditavel13.appendChild(btnRemover13);
+            })
+        }
+
+        // oitavas B
+
+        const salvar20 = document.querySelector('button.salvar20').addEventListener('click', async () => {
+            let save7 = []
+            let tabelaEditavel20 = document.getElementById('tabelaEditavel20');
+            let isFirst = true
+            for (let row of tabelaEditavel20.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save7.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save7'), { save7 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap20 = await getDoc(doc(db, "teste", "save7"));
+        if (!docSnap20.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap20.data());
+            let tableValue = docSnap20.data().save7
+            tableValue.forEach((row) => {
+                var trEditavel20 = document.createElement("tr");
+                var td1Editavel20 = document.createElement('td');
+                var td2Editavel20 = document.createElement("td");
+                td1Editavel20.contentEditable = true;
+                td2Editavel20.contentEditable = true;
+                td1Editavel20.textContent = row.chave;
+                td2Editavel20.textContent = row.value;
+                trEditavel20.appendChild(td1Editavel20);
+                trEditavel20.appendChild(td2Editavel20);
+                tabelaEditavel20.appendChild(trEditavel20);
+
+
+                var trNaoEditavel20 = document.createElement("tr");
+                var td1NaoEditavel20 = document.createElement('td');
+                var td2NaoEditavel20 = document.createElement("td");
+                td1NaoEditavel20.textContent = row.chave;
+                td2NaoEditavel20.textContent = row.value;
+                trNaoEditavel20.appendChild(td1NaoEditavel20);
+                trNaoEditavel20.appendChild(td2NaoEditavel20);
+                tabelaNaoEditavel20.appendChild(trNaoEditavel20);
+
+                var btnRemover20 = document.createElement("button");
+                btnRemover20.addEventListener('click', () => {
+                    trEditavel20.remove();
+                    trNaoEditavel20.remove();
+                });
+                btnRemover20.classList.add('remove')
+                trEditavel20.appendChild(btnRemover20);
+            })
+        }
+
+        // quartas B
+
+        const salvar21 = document.querySelector('button.salvar21').addEventListener('click', async () => {
+            let save8 = []
+            let tabelaEditavel21 = document.getElementById('tabelaEditavel21');
+            let isFirst = true
+            for (let row of tabelaEditavel21.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save8.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save8'), { save8 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap21 = await getDoc(doc(db, "teste", "save8"));
+        if (!docSnap21.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap21.data());
+            let tableValue = docSnap21.data().save8
+            tableValue.forEach((row) => {
+                var trEditavel21 = document.createElement("tr");
+                var td1Editavel21 = document.createElement('td');
+                var td2Editavel21 = document.createElement("td");
+                td1Editavel21.contentEditable = true;
+                td2Editavel21.contentEditable = true;
+                td1Editavel21.textContent = row.chave;
+                td2Editavel21.textContent = row.value;
+                trEditavel21.appendChild(td1Editavel21);
+                trEditavel21.appendChild(td2Editavel21);
+                tabelaEditavel21.appendChild(trEditavel21);
+
+
+                var trNaoEditavel21 = document.createElement("tr");
+                var td1NaoEditavel21 = document.createElement('td');
+                var td2NaoEditavel21 = document.createElement("td");
+                td1NaoEditavel21.textContent = row.chave;
+                td2NaoEditavel21.textContent = row.value;
+                trNaoEditavel21.appendChild(td1NaoEditavel21);
+                trNaoEditavel21.appendChild(td2NaoEditavel21);
+                tabelaNaoEditavel21.appendChild(trNaoEditavel21);
+
+                var btnRemover21 = document.createElement("button");
+                btnRemover21.addEventListener('click', () => {
+                    trEditavel21.remove();
+                    trNaoEditavel21.remove();
+                });
+                btnRemover21.classList.add('remove')
+                trEditavel21.appendChild(btnRemover21);
+            })
+        }
+
+        // semifinal B
+
+        const salvar22 = document.querySelector('button.salvar22').addEventListener('click', async () => {
+            let save9 = []
+            let tabelaEditavel22 = document.getElementById('tabelaEditavel22');
+            let isFirst = true
+            for (let row of tabelaEditavel22.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save9.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save9'), { save9 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap22 = await getDoc(doc(db, "teste", "save9"));
+        if (!docSnap22.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap22.data());
+            let tableValue = docSnap22.data().save9
+            tableValue.forEach((row) => {
+                var trEditavel22 = document.createElement("tr");
+                var td1Editavel22 = document.createElement('td');
+                var td2Editavel22 = document.createElement("td");
+                td1Editavel22.contentEditable = true;
+                td2Editavel22.contentEditable = true;
+                td1Editavel22.textContent = row.chave;
+                td2Editavel22.textContent = row.value;
+                trEditavel22.appendChild(td1Editavel22);
+                trEditavel22.appendChild(td2Editavel22);
+                tabelaEditavel22.appendChild(trEditavel22);
+
+
+                var trNaoEditavel22 = document.createElement("tr");
+                var td1NaoEditavel22 = document.createElement('td');
+                var td2NaoEditavel22 = document.createElement("td");
+                td1NaoEditavel22.textContent = row.chave;
+                td2NaoEditavel22.textContent = row.value;
+                trNaoEditavel22.appendChild(td1NaoEditavel22);
+                trNaoEditavel22.appendChild(td2NaoEditavel22);
+                tabelaNaoEditavel22.appendChild(trNaoEditavel22);
+
+                var btnRemover22 = document.createElement("button");
+                btnRemover22.addEventListener('click', () => {
+                    trEditavel22.remove();
+                    trNaoEditavel22.remove();
+                });
+                btnRemover22.classList.add('remove')
+                trEditavel22.appendChild(btnRemover22);
+            })
+        }
+
+        //final B
+
+        const salvar23 = document.querySelector('button.salvar23').addEventListener('click', async () => {
+            let save10 = []
+            let tabelaEditavel22 = document.getElementById('tabelaEditavel23');
+            let isFirst = true
+            for (let row of tabelaEditavel22.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row.cells[0].innerText,
+                        value: row.cells[1].innerText
+                    }
+                    save10.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'save10'), { save10 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnap23 = await getDoc(doc(db, "teste", "save10"));
+        if (!docSnap23.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnap23.data());
+            let tableValue = docSnap23.data().save10
+            tableValue.forEach((row) => {
+                var trEditavel23 = document.createElement("tr");
+                var td1Editavel23 = document.createElement('td');
+                var td2Editavel23 = document.createElement("td");
+                td1Editavel23.contentEditable = true;
+                td2Editavel23.contentEditable = true;
+                trEditavel23.appendChild(td1Editavel23);
+                trEditavel23.appendChild(td2Editavel23);
+                tabelaEditavel23.appendChild(trEditavel23);
+
+
+                var trNaoEditavel23 = document.createElement("tr");
+                var td1NaoEditavel23 = document.createElement('td');
+                var td2NaoEditavel23 = document.createElement("td");
+                td1NaoEditavel23.textContent = row.chave;
+                td2NaoEditavel23.textContent = row.value;
+                trNaoEditavel23.appendChild(td1NaoEditavel23);
+                trNaoEditavel23.appendChild(td2NaoEditavel23);
+                tabelaNaoEditavel23.appendChild(trNaoEditavel23);
+
+                var btnRemover23 = document.createElement("button");
+                btnRemover23.addEventListener('click', () => {
+                    trEditavel23.remove();
+                    trNaoEditavel23.remove();
+                });
+                btnRemover23.classList.add('remove')
+                trEditavel23.appendChild(btnRemover23);
+            })
+        }
 
     </script>
     <script src="index.js"></script>
