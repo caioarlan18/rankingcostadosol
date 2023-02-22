@@ -122,6 +122,18 @@
   z-index: 10;
   display: none;
 }
+.chav2 {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+  display: none;
+}
 
 .chav-1 {
   margin-top: 50px;
@@ -320,7 +332,15 @@ table.tabela1 {
   color: #3367d5;
   margin-top: 30px;
 }
-.orgpage-1 h2 {
+.orgpage-1 h2,
+.orgpage-10 h2,
+.orgpage-11 h2,
+.orgpage-12 h2,
+.orgpage-13 h2,
+.orgpage-20 h2,
+.orgpage-21 h2,
+.orgpage-22 h2,
+.orgpage-23 h2 {
   margin-top: 20px;
   margin-bottom: 50px;
   text-align: center;
@@ -381,7 +401,17 @@ tr:nth-child(even) {
   cursor: pointer;
   transition: 0.3s;
 }
-.addnew2 {
+.addnew2,
+.addnew3,
+.addnewb,
+.addnew10,
+.addnew11,
+.addnew12,
+.addnew13,
+.addnew20,
+.addnew21,
+.addnew22,
+.addnew23 {
   background-color: #3367d5;
   padding: 10px 10px;
   color: white;
@@ -413,7 +443,8 @@ tr:nth-child(even) {
   background-color: #1055cc;
   transition: 0.3s;
 }
-.addnew2:hover {
+.addnew2:hover,
+.addnew3:hover {
   background-color: #1055cc;
   transition: 0.3s;
 }
@@ -441,10 +472,7 @@ tr:nth-child(even) {
   cursor: pointer;
   transition: 0.3s;
 }
-.addnew3:hover {
-  background-color: #1055cc;
-  transition: 0.3s;
-}
+
 /* chave org */
 .orgpage-1 p {
   text-align: center;
@@ -457,7 +485,15 @@ tr:nth-child(even) {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.orgpage-1 {
+.orgpage-1,
+.orgpage-10,
+.orgpage-11,
+.orgpage-12,
+.orgpage-13,
+.orgpage-20,
+.orgpage-21,
+.orgpage-22,
+.orgpage-23 {
   border-bottom: 1px solid #3367d5;
   padding: 30px;
 }
@@ -488,7 +524,15 @@ tr:nth-child(even) {
 /* botão de salvar */
 .salvar1,
 .salvar2,
-.salvar4 {
+.salvar4,
+.salvar10,
+.salvar11,
+.salvar12,
+.salvar13,
+.salvar20,
+.salvar21,
+.salvar22,
+.salvar23 {
   background-color: #33b14d;
   padding: 10px 10px;
   width: 100px;
@@ -508,7 +552,11 @@ tr:nth-child(even) {
 .salvar1:hover,
 .salvar2:hover,
 .salvar3:hover,
-.salvar4:hover {
+.salvar4:hover,
+.salvar10:hover,
+.salvar11:hover,
+.salvar12:hover,
+.salvar13:hover {
   background-color: #3c9c4f;
   transition: 0, 3s;
 }
@@ -615,7 +663,15 @@ h1.catB {
 }
 
 #tabelaEditavel td,
-#tabelaEditavel2 td {
+#tabelaEditavel2 td,
+#tabelaEditavel10 td,
+#tabelaEditavel11 td,
+#tabelaEditavel12 td,
+#tabelaEditavel13 td,
+#tabelaEditavel20 td,
+#tabelaEditavel21 td,
+#tabelaEditavel22 td,
+#tabelaEditavel23 td {
   border: 1px solid black;
   color: black;
   font-weight: 600;
@@ -624,7 +680,7 @@ h1.catB {
 #chavEditavel td,
 #chavEditavel2 td {
   border: 1px solid black;
-  width: 20%;
+  width: 50%;
   color: black;
   font-weight: 600;
 }
@@ -704,7 +760,8 @@ h1.catB {
   color: black;
   margin-right: 10px;
 }
-#jogador {
+#jogador,
+#jogador2 {
   width: 70px;
   border: 1px solid black;
   height: 20px;
@@ -724,14 +781,16 @@ h1.catB {
   text-align: center;
 }
 
-#jogadores_por_chave {
+#jogadores_por_chave,
+#jogadores_por_chave2 {
   width: 35px;
   margin-top: 5px;
   height: 20px;
   border: 1px solid black;
 }
 
-#jogadores {
+#jogadores,
+#jogadores2 {
   text-align: center;
   background-color: #b3b3b3;
   border-radius: 10px;
@@ -790,4 +849,55 @@ h1.catB {
   cursor: pointer;
   font-size: 12px;
   margin-left: 10px;
+}
+
+#tabelaNaoEditavel10 td,
+#tabelaNaoEditavel11 td,
+#tabelaNaoEditavel12 td,
+#tabelaNaoEditavel13 td,
+#tabelaNaoEditavel20 td,
+#tabelaNaoEditavel21 td,
+#tabelaNaoEditavel22 td,
+#tabelaNaoEditavel23 td {
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+}
+
+.tabela-10 {
+  border-bottom: 1px solid black;
+  padding: 50px;
+}
+.tabela-10 h1 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: montserrat;
+  font-size: 25px;
+  color: #3367d5;
+}
+li a.subchav1,
+li a.subchav2 {
+  color: white;
+  font-size: 15px;
+}
+.subchav1 {
+  position: relative;
+  bottom: 10px;
+  left: 15px;
+}
+.subchav2 {
+  position: relative;
+  bottom: 20px;
+  left: 15px;
+}
+.subglob {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.subglobopen {
+  height: 70px;
+  overflow: visible;
+  transition: 0.3s;
 }
