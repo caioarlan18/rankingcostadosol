@@ -563,8 +563,6 @@
                         <button type="button" onclick="criarTabela()" class="ct">Criar Chaves</button>
                         <button class="salvar3">Salvar</button>
                         <button type="button" onclick="removerTodosJogadores()" class="rt">Remover chaves</button>
-
-
                     </div>
 
                 </form>
@@ -604,7 +602,7 @@
                     <ul id="jogadores2"></ul>
                     <div class="fm2">
                         <button type="button" onclick="criarTabela2()" class="ct">Criar Chaves</button>
-                        <button class="salvar3">Salvar</button>
+                        <button class="salvar4">Salvar</button>
                         <button type="button" onclick="removerTodosJogadores2()" class="rt">Remover chaves</button>
                     </div>
                 </form>
@@ -878,7 +876,7 @@
             })
         }
 
-        // chave categoria A
+
 
         // oitavas a
         const salvar10 = document.querySelector('button.salvar10').addEventListener('click', async () => {
@@ -1370,6 +1368,129 @@
                 });
                 btnRemover23.classList.add('remove')
                 trEditavel23.appendChild(btnRemover23);
+            })
+        }
+
+        // chave A
+
+        const salvar24 = document.querySelector('button.salvar3').addEventListener('click', async () => {
+            event.preventDefault()
+            let chave1 = []
+            let chavEditavel = document.getElementById('chavEditavel');
+            let isFirst = true
+            for (let row18 of chavEditavel.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row18.cells[0].innerText,
+                        value: row18.cells[1].innerHTML
+                    }
+                    chave1.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'chave1'), { chave1 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnapchave1 = await getDoc(doc(db, "teste", "chave1"));
+        if (!docSnapchave1.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnapchave1.data());
+            let tableValue = docSnapchave1.data().chave1
+            tableValue.forEach((row18) => {
+
+                let chavNaoEditavel = document.getElementById('chavNaoEditavel');
+                let newRow = document.createElement('tr');
+                let firstCell = document.createElement('td');
+                let firstText = document.createTextNode(row18.chave);
+                firstCell.appendChild(firstText);
+
+                let secondCell = document.createElement('td');
+                secondCell.innerHTML = row18.value;
+                newRow.appendChild(firstCell);
+                newRow.appendChild(secondCell);
+                chavNaoEditavel.appendChild(newRow);
+
+
+                let chavEditavel = document.getElementById('chavEditavel');
+                let newRow1 = document.createElement('tr');
+                let firstCell1 = document.createElement('td');
+                let firstText1 = document.createTextNode(row18.chave);
+                firstCell1.appendChild(firstText1);
+
+                let secondCell1 = document.createElement('td');
+                secondCell1.innerHTML = row18.value;
+                newRow1.appendChild(firstCell1);
+                newRow1.appendChild(secondCell1);
+                chavEditavel.appendChild(newRow1);
+
+            })
+        }
+
+        // chave B
+
+
+        const salvar25 = document.querySelector('button.salvar4').addEventListener('click', async () => {
+            event.preventDefault()
+            let chave2 = []
+            let chavEditavel2 = document.getElementById('chavEditavel2');
+            let isFirst = true
+            for (let row20 of chavEditavel2.rows) {
+                if (!isFirst) {
+                    let obj = {
+                        chave: row20.cells[0].innerText,
+                        value: row20.cells[1].innerHTML
+                    }
+                    chave2.push(obj)
+                }
+                isFirst = false
+            }
+            try {
+                const docRef = await setDoc(doc(db, 'teste', 'chave2'), { chave2 });
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+            alert('Salvo com sucesso')
+        })
+
+        const docSnapchave2 = await getDoc(doc(db, "teste", "chave2"));
+        if (!docSnapchave2.exists) {
+            console.log('No such document!');
+        } else {
+            console.log('Document data:', docSnapchave2.data());
+            let tableValue = docSnapchave2.data().chave2
+            tableValue.forEach((row20) => {
+
+                let chavNaoEditavel2 = document.getElementById('chavNaoEditavel2');
+                let newRow2 = document.createElement('tr');
+                let firstCell2 = document.createElement('td');
+                let firstText2 = document.createTextNode(row20.chave);
+                firstCell2.appendChild(firstText2);
+
+                let secondCell2 = document.createElement('td');
+                secondCell2.innerHTML = row20.value;
+                newRow2.appendChild(firstCell2);
+                newRow2.appendChild(secondCell2);
+                chavNaoEditavel2.appendChild(newRow2);
+
+
+                let chavEditavel2 = document.getElementById('chavEditavel2');
+                let newRow3 = document.createElement('tr');
+                let firstCell3 = document.createElement('td');
+                let firstText3 = document.createTextNode(row20.chave);
+                firstCell3.appendChild(firstText3);
+
+                let secondCell3 = document.createElement('td');
+                secondCell3.innerHTML = row20.value;
+                newRow3.appendChild(firstCell3);
+                newRow3.appendChild(secondCell3);
+                chavEditavel2.appendChild(newRow3);
+
             })
         }
 
