@@ -442,10 +442,11 @@ function criarTabela() {
     var num_chaves = Math.ceil(num_jogadores / jogadores_por_chave);
 
     // Randomiza a lista de jogadores
-    jogadores.sort(function () { return Math.random() - 0.5; });
 
+    jogadores.sort(function () { return Math.random() - 0.5; });
     var tabela = document.getElementById("chavEditavel");
     var jogadoresList = document.getElementById("jogadores");
+    jogadoresList.innerHTML = "";
 
     if (jogadores_por_chave !== '') {
         for (var i = 0; i < num_jogadores; i++) {
@@ -465,28 +466,24 @@ function criarTabela() {
 
         for (var i = 0; i < num_chaves; i++) {
             var row = tabela.insertRow();
-            var cell1 = row.insertCell(0);
-            cell1.innerHTML = "Chave " + (i + 1);
-            var cell2 = row.insertCell(1);
-            var tabelaJogadores = document.createElement("table");
-            tabelaJogadores.contentEditable = true
-            tabelaJogadores.setAttribute("id", "tabela-jogadores-" + (i + 1));
-            cell2.appendChild(tabelaJogadores);
+            var cell = row.insertCell(0);
+            cell.innerHTML = "Chave " + (i + 1);
+            var cell = row.insertCell(1);
+            cell.contentEditable = true
             var jogadoresChave = jogadores.slice(i * jogadores_por_chave, (i + 1) * jogadores_por_chave);
+            var jogadoresChaveHTML = '';
             for (var j = 0; j < jogadoresChave.length; j++) {
-                var row = tabelaJogadores.insertRow();
-                var cell1 = row.insertCell(0);
-                cell1.innerHTML = (i * jogadores_por_chave + j + 1) + ".";
-                var cell2 = row.insertCell(1);
-                cell2.innerHTML = jogadoresChave[j];
+                jogadoresChaveHTML += (i * jogadores_por_chave + j + 1) + ". " + jogadoresChave[j] + '<br> <br> <br>';
+
             }
+            cell.innerHTML = jogadoresChaveHTML;
 
         }
-        jogadores = []
-        jogadoresList.innerHTML = "";
+
+
 
     } else if (jogadores_por_chave == '') {
-        alert("Preencha o campo 'Jogadores por chave'")
+        alert("O campo está em branco")
     } else {
         alert('erro')
     }
@@ -496,10 +493,12 @@ function criarTabela() {
 }
 function removerTodosJogadores() {
     var tabela = document.getElementById("chavEditavel");
+
     var num_chaves = tabela.rows.length - 1; // subtrai 1 para ignorar a linha do cabeçalho
 
     for (var i = num_chaves; i >= 1; i--) {
         tabela.deleteRow(i);
+
     }
 }
 
@@ -578,25 +577,17 @@ function criarTabela2() {
             var cell2 = row2.insertCell(0);
             cell2.innerHTML = "Chave " + (i + 1);
             var cell2 = row2.insertCell(1);
-            var tabelaJogadores2 = document.createElement("table");
-            tabelaJogadores2.contentEditable = true
-            tabelaJogadores2.setAttribute("id", "tabela-jogadores-" + (i + 1));
-            cell2.appendChild(tabelaJogadores2);
             var jogadoresChave2 = jogadores2.slice(i * jogadores_por_chave2, (i + 1) * jogadores_por_chave2);
+            var jogadoresChave2HTML = '';
             for (var j = 0; j < jogadoresChave2.length; j++) {
-                var row2 = tabelaJogadores2.insertRow();
-                var cell2 = row2.insertCell(0);
-                cell2.innerHTML = (i * jogadores_por_chave2 + j + 1) + ".";
-                var cell3 = row2.insertCell(1);
-                cell3.innerHTML = jogadoresChave2[j];
+                jogadoresChave2HTML += (i * jogadores_por_chave2 + j + 1) + ". " + jogadoresChave2[j] + "<br> <br> <br>";
             }
-
+            cell2.innerHTML = jogadoresChave2HTML;
         }
-        jogadores2 = []
-        jogadoresList2.innerHTML = "";
+
 
     } else if (jogadores_por_chave2 == '') {
-        alert("Preencha o campo 'Jogadores por chave'")
+        alert("O campo está em branco")
     } else {
         alert('erro')
     }
