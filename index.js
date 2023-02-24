@@ -555,7 +555,7 @@ function criarTabela2() {
 
     var tabela2 = document.getElementById("chavEditavel2");
     var jogadoresList2 = document.getElementById("jogadores2");
-
+    jogadoresList2.innerHTML = ''
     if (jogadores_por_chave2 !== '') {
         for (var i = 0; i < num_jogadores2; i++) {
             var jogador2 = document.createElement("li");
