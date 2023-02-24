@@ -577,6 +577,7 @@ function criarTabela2() {
             var cell2 = row2.insertCell(0);
             cell2.innerHTML = "Chave " + (i + 1);
             var cell2 = row2.insertCell(1);
+            cell2.contentEditable = true
             var jogadoresChave2 = jogadores2.slice(i * jogadores_por_chave2, (i + 1) * jogadores_por_chave2);
             var jogadoresChave2HTML = '';
             for (var j = 0; j < jogadoresChave2.length; j++) {
