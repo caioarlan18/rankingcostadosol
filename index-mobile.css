@@ -524,7 +524,6 @@ tr:nth-child(even) {
 /* botão de salvar */
 .salvar1,
 .salvar2,
-.salvar4,
 .salvar10,
 .salvar11,
 .salvar12,
@@ -808,7 +807,8 @@ h1.catB {
   display: flex;
 }
 
-.salvar3 {
+.salvar3,
+.salvar4 {
   background-color: #33b14d;
   height: 30px;
   width: 100px;
@@ -900,4 +900,12 @@ li a.subchav2 {
   height: 70px;
   overflow: visible;
   transition: 0.3s;
+}
+
+#chavEditavel td,
+#chavNaoEditavel2 td,
+#chavEditavel2 td,
+#chavNaoEditavel td {
+  font-size: 17px;
+  color: black;
 }
