@@ -3,15 +3,14 @@
   .nv {
     display: none;
   }
-  .hdd-1 {
+  .hdd {
     display: none;
   }
-  .hdd {
+  .hdd-desk {
     display: flex;
+    align-items: center;
   }
-  .hd-2 {
-    display: block;
-  }
+
   .hd-2 img {
     cursor: pointer;
     margin-top: 10px;
