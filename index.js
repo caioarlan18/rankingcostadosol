@@ -9,6 +9,8 @@ var tabela = document.querySelector('table.tabela')
 var tabela2 = document.querySelector("section.tabela2")
 var tabela1 = document.querySelector('table.tabela1')
 var desa = document.querySelector("div.desa")
+var homecontent = document.querySelector('div.home-content')
+var orient = document.querySelector('h1.orient')
 // menu hamburguer
 function menu_hamburguer() {
     menu.classList.toggle('open')
@@ -17,6 +19,10 @@ function menu_hamburguer() {
 
 // adaptação single page sem framework
 function close() {
+    menu.classList.remove('open')
+}
+
+function close1() {
     menu.classList.remove('open')
 }
 
@@ -29,6 +35,8 @@ function reg() {
     orgpage.classList.remove("orgpageopen")
     chave2.classList.remove('chaveopen')
     desa.classList.add('htabela')
+    homecontent.classList.add('ss')
+    orient.innerHTML = 'Pontuações'
 }
 
 function home() {
@@ -40,6 +48,8 @@ function home() {
     orgpage.classList.remove("orgpageopen")
     chave2.classList.remove('chaveopen')
     desa.classList.remove('htabela')
+    homecontent.classList.remove('ss')
+    orient.innerHTML = 'Home'
 }
 function chav() {
     chave.classList.add('chaveopen')
@@ -50,6 +60,8 @@ function chav() {
     orgpage.classList.remove("orgpageopen")
     desa.classList.add('htabela')
     chave2.classList.remove('chaveopen')
+    homecontent.classList.add('ss')
+    orient.innerHTML = 'Chaveamento'
 }
 function chavB() {
     chave2.classList.add('chaveopen')
@@ -60,27 +72,10 @@ function chavB() {
     back.classList.remove("orgopen")
     orgpage.classList.remove("orgpageopen")
     desa.classList.add('htabela')
+    homecontent.classList.add('ss')
+    orient.innerHTML = 'Chaveamento'
 
 }
-// menu arrow(submenu home mobile e desktop)
-function arrow() {
-    // mobile
-    var submenu1 = document.querySelector("a.submenu1")
-    var submenu2 = document.querySelector("a.submenu2")
-
-    // desktop
-    var submenu3 = document.querySelector("a.submenu3")
-    var submenu4 = document.querySelector("a.submenu4")
-
-    // mobile
-    submenu1.classList.toggle("submenuopen")
-    submenu2.classList.toggle('submenuopen')
-
-    // desktop
-    submenu3.classList.toggle("submenuopen1")
-    submenu4.classList.toggle('submenuopen1')
-}
-
 
 // pagina org.html tabela de pontuação
 
@@ -183,6 +178,8 @@ function org() {
     back.classList.add("orgopen")
     orgpage.classList.remove("orgpageopen")
     desa.classList.add('htabela')
+    homecontent.classList.add('ss')
+    orient.innerHTML = 'Painel'
 }
 
 
@@ -555,7 +552,7 @@ function criarTabela2() {
 
     var tabela2 = document.getElementById("chavEditavel2");
     var jogadoresList2 = document.getElementById("jogadores2");
-    jogadoresList2.innerHTML = ''
+
     if (jogadores_por_chave2 !== '') {
         for (var i = 0; i < num_jogadores2; i++) {
             var jogador2 = document.createElement("li");
@@ -577,7 +574,6 @@ function criarTabela2() {
             var cell2 = row2.insertCell(0);
             cell2.innerHTML = "Chave " + (i + 1);
             var cell2 = row2.insertCell(1);
-            cell2.contentEditable = true
             var jogadoresChave2 = jogadores2.slice(i * jogadores_por_chave2, (i + 1) * jogadores_por_chave2);
             var jogadoresChave2HTML = '';
             for (var j = 0; j < jogadoresChave2.length; j++) {
