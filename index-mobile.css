@@ -3,6 +3,9 @@
   padding: 0 auto;
   scroll-behavior: smooth;
 }
+body {
+  overflow-x: hidden;
+}
 
 /* cabeçalho */
 .hdd {
@@ -202,11 +205,8 @@
 
 table.tabela {
   height: 50px;
-  background-color: #e6e6e6;
+
   width: 100%;
-}
-.tabela-1 {
-  display: none;
 }
 
 div.tabela1 {
@@ -216,20 +216,22 @@ table.tabela1 {
   height: 50px;
   margin-bottom: 30px;
 }
-.tabela-1 h1,
+
 .tabela-2 h1,
 .tabela-3 h1,
 .tabela-4 h1,
 .tabela-5 h1,
 .tabela-6 h1,
 .tabela-7 h1 {
-  text-align: center;
-  font-family: montserrat;
-  font-size: 12px;
-  color: #333333;
+  font-family: poppins;
+  font-size: 14px;
+  color: white;
   margin-top: 30px;
   width: 95%;
+  margin-left: 30px;
+  font-weight: 800;
 }
+.tabela-1 h1,
 .tabela2 h1,
 .tabela3 h1,
 .tabela4 h1,
@@ -237,12 +239,13 @@ table.tabela1 {
 .tabela6 h1,
 .tabela7 h1,
 .tabela8 h1 {
-  text-align: center;
-  font-family: montserrat;
-  font-size: 12px;
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 800;
   color: #333333;
   margin-top: 30px;
   width: 95%;
+  margin-left: 30px;
 }
 
 /* login do organizador */
@@ -390,7 +393,7 @@ table.tabela1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .esp {
   color: #3367d5;
@@ -401,17 +404,20 @@ table {
 }
 td {
   padding: 8px;
-  text-align: center;
-  font-family: montserrat;
+  font-family: poppins;
   width: 50%;
   font-size: 12px;
-  color: #808080;
+  color: white;
 }
-tr:nth-child(odd) {
-  background-color: #e6e6e6;
+#tabelaNaoEditavele7 {
+  padding: 8px;
+  font-family: poppins;
+  font-size: 12px;
+  color: white;
 }
-tr:nth-child(even) {
-  background-color: #ffffff;
+#tabelaNaoEditavel td,
+#tabelaNaoEditavel2 td {
+  color: black;
 }
 .remove {
   background-color: red;
@@ -595,19 +601,13 @@ tr:nth-child(even) {
 }
 /* tabela hidden etapas passadas */
 
-.dropA {
-  list-style: none;
+.drop1 {
   display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
   flex-direction: row-reverse;
   width: 100%;
 }
-.drop17 {
-  width: 100%;
-}
-.dropA li {
+
+.drop18 h1 {
   color: white;
   text-decoration: none;
   font-size: 13px;
@@ -615,28 +615,37 @@ tr:nth-child(even) {
   font-family: poppins;
   cursor: pointer;
 }
+
 .drop18 {
   margin-top: 20px;
-  height: 40px;
-  margin-right: 70px;
   border-radius: 10px;
   padding: 15px;
   background-color: #ff6a49;
   width: 80%;
+  cursor: pointer;
 }
-.dropA p {
+.drop17 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.drop18 p {
   margin-top: 3px;
   font-size: 10px;
   font-weight: 400;
   font-family: poppins;
+  color: white;
 }
 .drop19 {
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 .drop20 {
-  margin: 20px;
-  height: 40px;
+  margin-top: 17px;
+  margin-left: 10px;
   padding: 15px;
+  display: flex;
 }
 .drop20 h1 {
   color: #8d8f8d;
@@ -644,26 +653,45 @@ tr:nth-child(even) {
   font-weight: 600;
   font-size: 14px;
 }
-.dropA li.active {
-  color: #333333;
-}
-.tabela-1,
+
 .tabela-2,
 .tabela-3,
 .tabela-4,
 .tabela-5,
 .tabela-6,
 .tabela-7 {
-  height: 0px;
+  height: 0;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
+}
+.bl {
+  height: 600px;
+  overflow: visible;
+  transition: 0.5s;
+}
+.tabela-1,
+.tabela2 {
+  margin-top: 50px;
+}
+.tabela-1 table,
+.tabela-2 table,
+.tabela-3 table,
+.tabela-4 table,
+.tabela-5 table,
+.tabela-6 table,
+.tabela-7 table {
+  margin-left: 30px;
+}
+.tabela2 table,
+.tabela3 table,
+.tabela4 table,
+.tabela5 table,
+.tabela6 table,
+.tabela7 table,
+.tabela8 table {
+  margin-left: 30px;
 }
 
-.bl {
-  height: 100%;
-  transition: 0.3s;
-  overflow: visible;
-}
 .catA {
   text-align: center;
   font-family: montserrat;
@@ -711,17 +739,20 @@ h1.catB {
   font-size: 30px;
 }
 
-.tabela2,
 .tabela3,
 .tabela4,
 .tabela5,
 .tabela6,
 .tabela7,
 .tabela8 {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
 .blb {
-  display: block;
+  height: 550px;
+  overflow: visible;
+  transition: 0.5s;
 }
 
 #tabelaEditavel td,
@@ -745,6 +776,7 @@ h1.catB {
   width: 50%;
   color: black;
   font-weight: 600;
+  text-align: center;
 }
 #chavNaoEditavel td,
 #chavNaoEditavel2 td {
@@ -997,8 +1029,9 @@ li a.subchav2 {
 /* conteudo da home page */
 .home-content {
   position: relative;
-  top: 70px;
+  top: 150px;
 }
+
 .home-content-1 h1 {
   color: #3e4441;
   font-family: poppins;
@@ -1015,7 +1048,7 @@ li a.subchav2 {
   margin-top: 20px;
   width: 80%;
   background-color: #f2f2f2;
-  padding: 25px;
+  padding: 20px;
   text-align: justify;
   border-radius: 5px;
 }
@@ -1035,9 +1068,9 @@ li a.subchav2 {
   font-weight: 500;
   margin-top: 20px;
   width: 80%;
-  margin-bottom: 150px;
+  margin-bottom: 230px;
   background-color: #f2f2f2;
-  padding: 25px;
+  padding: 20px;
   border-radius: 5px;
 }
 
@@ -1048,4 +1081,23 @@ li a.subchav2 {
 }
 .redes img {
   cursor: pointer;
+}
+.none {
+  display: none;
+}
+.ordem {
+  order: -1;
+}
+
+.pont-geral {
+  background-color: white;
+  height: 500px;
+  margin-top: 40px;
+  padding-bottom: 900px;
+}
+.maintxtpt h1 {
+  color: #3e4441;
+  font-size: 20px;
+  font-family: poppins;
+  margin-left: 30px;
 }
