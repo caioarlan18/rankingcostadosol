@@ -212,16 +212,7 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
     }
 })
 
-const menuItems = document.querySelectorAll("ul.dropA li");
 
-menuItems.forEach(item => {
-    item.addEventListener("click", function () {
-        menuItems.forEach(item => {
-            item.classList.remove("active");
-        });
-        this.classList.add("active");
-    });
-});
 
 var e11a = document.querySelector('div.tabela-1')
 var e12a = document.querySelector('div.tabela-2')
@@ -231,87 +222,6 @@ var e15a = document.querySelector('div.tabela-5')
 var e16a = document.querySelector('div.tabela-6')
 var e17a = document.querySelector('div.tabela-7')
 
-
-function e1a() {
-    e11a.classList.remove('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-    e17a.classList.add('bl')
-}
-function e2a() {
-    e11a.classList.remove('bl')
-    e12a.classList.add('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-}
-function e3a() {
-    e11a.classList.remove('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.add('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-}
-function e4a() {
-    e11a.classList.remove('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.add('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-}
-function e5a() {
-    e11a.classList.remove('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.add('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-}
-function e6a() {
-    e11a.classList.remove('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.add('bl')
-    e17a.classList.remove('bl')
-}
-function e7a() {
-    e11a.classList.add('bl')
-    e12a.classList.remove('bl')
-    e13a.classList.remove('bl')
-    e14a.classList.remove('bl')
-    e15a.classList.remove('bl')
-    e16a.classList.remove('bl')
-    e17a.classList.remove('bl')
-}
-
-
-// B
-
-const menuItems2 = document.querySelectorAll("ul.dropB li");
-
-menuItems2.forEach(item => {
-    item.addEventListener("click", function () {
-        menuItems2.forEach(item => {
-            item.classList.remove("active2");
-        });
-        this.classList.add("active2");
-    });
-});
-
-
 var e11b = document.querySelector('div.tabela2')
 var e12b = document.querySelector('div.tabela3')
 var e13b = document.querySelector('div.tabela4')
@@ -319,74 +229,109 @@ var e14b = document.querySelector('div.tabela5')
 var e15b = document.querySelector('div.tabela6')
 var e16b = document.querySelector('div.tabela7')
 var e17b = document.querySelector('div.tabela8')
+var oi1 = document.querySelector("div#oi1")
+var oi2 = document.querySelector("div#oi2")
+var oi3 = document.querySelector("div#oi3")
+var oi4 = document.querySelector("div#oi4")
+var oi5 = document.querySelector("div#oi5")
+var oi6 = document.querySelector("div#oi6")
+
+function e1a() {
+    e17a.classList.toggle('bl')
+    e17b.classList.toggle('blb')
+    oi1.classList.remove('none')
+    oi2.classList.toggle('none')
+    oi3.classList.toggle('none')
+    oi4.classList.toggle('none')
+    oi5.classList.toggle('none')
+    oi6.classList.toggle('none')
+    oi1.classList.toggle('ordem')
 
 
-function e1b() {
-    e11b.classList.remove('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
-    e17b.classList.add('blb')
 }
-function e2b() {
-    e11b.classList.remove('blb')
-    e12b.classList.add('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
+function e2a() {
+    e12a.classList.toggle('bl')
+    e12b.classList.toggle('blb')
+    oi1.classList.toggle('none')
+    oi2.classList.remove('none')
+    oi3.classList.toggle('none')
+    oi4.classList.toggle('none')
+    oi5.classList.toggle('none')
+    oi6.classList.toggle('none')
+    oi2.classList.toggle('ordem')
 }
-function e3b() {
-    e11b.classList.remove('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.add('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
+function e3a() {
+    e13a.classList.toggle('bl')
+    e13b.classList.toggle('blb')
+    oi1.classList.toggle('none')
+    oi2.classList.toggle('none')
+    oi3.classList.remove('none')
+    oi4.classList.toggle('none')
+    oi5.classList.toggle('none')
+    oi6.classList.toggle('none')
+    oi3.classList.toggle('ordem')
 }
-function e4b() {
-    e11b.classList.remove('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.add('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
+function e4a() {
+    e14a.classList.toggle('bl')
+    e14b.classList.toggle('blb')
+    oi1.classList.toggle('none')
+    oi2.classList.toggle('none')
+    oi3.classList.toggle('none')
+    oi4.classList.remove('none')
+    oi5.classList.toggle('none')
+    oi6.classList.toggle('none')
+    oi4.classList.toggle('ordem')
 }
-function e5b() {
-    e11b.classList.remove('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.add('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
+function e5a() {
+    e15a.classList.toggle('bl')
+    e15b.classList.toggle('blb')
+    oi1.classList.toggle('none')
+    oi2.classList.toggle('none')
+    oi3.classList.toggle('none')
+    oi4.classList.toggle('none')
+    oi5.classList.remove('none')
+    oi6.classList.toggle('none')
+    oi5.classList.toggle('ordem')
 }
-function e6b() {
-    e11b.classList.remove('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.add('blb')
-    e17b.classList.remove('blb')
-}
-function e7b() {
-    e11b.classList.add('blb')
-    e12b.classList.remove('blb')
-    e13b.classList.remove('blb')
-    e14b.classList.remove('blb')
-    e15b.classList.remove('blb')
-    e16b.classList.remove('blb')
-    e17b.classList.remove('blb')
+function e6a() {
+    e16a.classList.toggle('bl')
+    e16b.classList.toggle('blb')
+    oi1.classList.toggle('none')
+    oi2.classList.toggle('none')
+    oi3.classList.toggle('none')
+    oi4.classList.toggle('none')
+    oi5.classList.toggle('none')
+    oi6.classList.remove('none')
+    oi6.classList.toggle('ordem')
 }
 
-// checkbox
+
+const boxes = document.querySelectorAll('div.drop18');
+let isBoxHidden = false;
+
+boxes.forEach((box) => {
+    box.addEventListener('click', () => {
+        // se as divs estão visíveis, esconde todas e move a clicada para o topo
+        if (!isBoxHidden) {
+            boxes.forEach((box2) => {
+                if (box2 !== box) {
+                    box2.style.display = 'none';
+                }
+            });
+            box.style.order = '-1';
+            isBoxHidden = true;
+        } else { // se as divs estão escondidas, mostra todas
+            boxes.forEach((box2) => {
+                box2.style.display = 'block';
+                box2.style.order = 'initial';
+            });
+            isBoxHidden = false;
+        }
+    });
+});
+
+
+
 
 
 
