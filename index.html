@@ -18,21 +18,31 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
     <link rel="icon" href="./img/favicon-rankingcostadosol.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- cabeçalho mobile -->
     <header class="hdd">
         <div class="hdd-1">
-            <img src="./img/logo-do-site.png" alt="logo principal do site" width="210px" height="210px"
-                onclick="home()">
-        </div>
-        <div class="hdd-1">
             <span class="material-symbols-outlined" onclick="menu_hamburguer()">
                 menu
             </span>
         </div>
-        <!-- cabeçalho desktop -->
+        <div class="hdd-1">
+            <h1 class="orient">Home</h1>
+        </div>
+        <div class="hdd-1">
+            <img src="./img/logo do site.png" alt="logo principal do site" height="210px" onclick="home()">
+        </div>
+    </header>
+
+    <!-- cabeçalho desktop -->
+    <header class="hdd-desk">
+
         <div class="hd-2">
             <img src="./img/logo-do-site.png" alt="logo principal do site" width="250px" height="250px">
         </div>
@@ -55,40 +65,96 @@
 
     <!-- menu hamburguer(mobile) -->
     <nav class="nv">
+        <span class="material-symbols-outlined" onclick="close1()">
+            close
+        </span>
         <ul>
-            <li><a href="#" onclick="home()">Home</a><img
-                    src="./img/keyboard-left-arrow-button_icon-icons.com_72692.svg" alt="" width="15px" height="15px"
-                    class="arrow" onclick="arrow()">
+            <li onclick="home()"><a href="#">Home</a></li>
+            <li onclick="subchavv()"><a href="#">Chaveamento</a>
+                <div class="subglob">
+                    <a href="#" onclick="chav()" class="subchav1">Categoria A</a>
+                    <a href="#" onclick="chavB()" class="subchav2">Categoria B</a>
+                </div>
             </li>
-            <a href="https://www.instagram.com/tmprogressocabofrio/" class="submenu1">Instagram</a>
-            <a href="https://www.facebook.com/tmprogresso.cabofrio.5" class="submenu2">Facebook</a>
-            <li><a href="#" onclick="reg()">Regulamentos</a></li>
-            <li><a href="#" onclick="subchavv()">Chaveamento</a></li>
-            <div class="subglob">
-                <li><a href="#" onclick="chav()" class="subchav1">Categoria A</a></li>
-                <li><a href="#" onclick="chavB()" class="subchav2">Categoria B</a></li>
+
+            <li><a href="#" onclick="org()">Painel</a></li>
+            <div class="redes">
+                <a href="https://www.instagram.com/tmprogressocabofrio/"><img
+                        src="./img/instagram_internet_media_network_social_icon_123258.svg" alt="icone instagram"
+                        width="25px"></a>
+                <a href="https://www.facebook.com/tmprogresso.cabofrio.5
+                "><img src="./img/FB_icon-icons.com_65484.svg" alt="icone do facebook" width="25px"></a>
             </div>
-            <li><a href="#" onclick="org()">Entrar como organizador</a></li>
         </ul>
+
     </nav>
 
 
     <!-- main do site -->
     <main class="mn">
         <div class="mn-1">
-            <img src="./img/tenis-mesa-1.png" alt="imagem principal do site" id="mn">
+            <img src="./img/foto-main.jpg" alt="imagem principal do site" onclick="reg()">
         </div>
         <div class="mn-2">
-            <img src="./img/4262849.jpg" alt="">
+            <img src="./img/4262849.jpg" alt="imagem principal do site">
         </div>
     </main>
 
     <!-- regulamento do ranking -->
     <section class="sec">
         <div class="sec-1">
-            <h1 id="sec-1">Regulamento</h1>
-            <a href="./img/Regulamento do Ranking Costa do Sol 2023.docx" download="regulamento">Clique aqui para baixar
-                o regulamento do torneio</a>
+            <div class="drop1">
+
+                <ul class="dropA">
+                    <div class="drop17">
+                        <div class="drop18">
+                            <li onclick="e6a()">Etapa 6 <p>A definir</p>
+                            </li>
+                        </div>
+                        <div class="drop18">
+                            <li onclick="e5a()">Etapa 5 <p>A definir</p>
+                            </li>
+                        </div>
+                        <div class="drop18">
+                            <li onclick="e4a()">Etapa 4 <p>A definir</p>
+                            </li>
+                        </div>
+                        <div class="drop18">
+                            <li onclick="e3a()">Etapa 3 <p>A definir</p>
+                            </li>
+                        </div>
+                        <div class="drop18">
+                            <li onclick="e2a()">Etapa 2 <p>Rio das Ostras</p>
+                            </li>
+                        </div>
+                        <div class="drop18">
+                            <li onclick="e1a()">Etapa 1 <p>Cabo Frio</p>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="drop19">
+                        <div class="drop20">
+                            <h1>05/07 <br> 2023</h1>
+                        </div>
+                        <div class="drop20">
+                            <h1>05/06 <br> 2023</h1>
+                        </div>
+                        <div class="drop20">
+                            <h1>05/05 <br> 2023</h1>
+                        </div>
+                        <div class="drop20">
+                            <h1>05/04 <br> 2023</h1>
+                        </div>
+                        <div class="drop20">
+                            <h1>05/03 <br> 2023</h1>
+                        </div>
+                        <div class="drop20">
+                            <h1>05/02 <br> 2023</h1>
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -219,19 +285,6 @@
     <!-- pontuação do ranking(nao editavel) -->
     <!-- categoria A -->
     <div class="desa">
-        <h1 class="catA">Categoria A</h1>
-        <div class="drop1">
-
-            <ul class="dropA">
-                <li onclick="e1a()">Etapa1</li>
-                <li onclick="e2a()">Etapa2</li>
-                <li onclick="e3a()">Etapa3</li>
-                <li onclick="e4a()">Etapa4</li>
-                <li onclick="e5a()">Etapa5</li>
-                <li onclick="e6a()">Etapa6</li>
-                <li onclick="e7a()">Total</li>
-            </ul>
-        </div>
         <div class="tabela-1">
             <h1>Pontuação Total</h1>
             <table id="tabelaNaoEditavel" class="tabela">
@@ -241,7 +294,7 @@
 
         </div>
         <div class="tabela-2">
-            <h1>Local | Rio das Ostras | 05/03</h1>
+            <h1>Categoria A</h1>
             <table id="tabelaNaoEditavele2" class="tabelae2">
 
             </table>
@@ -249,14 +302,14 @@
 
         </div>
         <div class="tabela-3">
-            <h1>Local | Indefinido | Indefinido</h1>
+            <h1>Categoria a</h1>
             <table id="tabelaNaoEditavele3" class="tabelae3">
 
             </table>
 
         </div>
         <div class="tabela-4">
-            <h1>Local | Indefinido | Indefinido</h1>
+            <h1>Categoria A</h1>
             <table id="tabelaNaoEditavele4" class="tabelae4">
 
             </table>
@@ -264,7 +317,7 @@
 
         </div>
         <div class="tabela-5">
-            <h1>Local | Indefinido | Indefinido</h1>
+            <h1>Categoria A</h1>
             <table id="tabelaNaoEditavele5" class="tabelae5">
 
             </table>
@@ -272,7 +325,7 @@
 
         </div>
         <div class="tabela-6">
-            <h1>Local | Indefinido | Indefinido</h1>
+            <h1>Categoria A</h1>
             <table id="tabelaNaoEditavele6" class="tabelae6">
 
             </table>
@@ -281,7 +334,7 @@
         </div>
         <!-- 1 etapa -->
         <div class="tabela-7">
-            <h1>Local | Cabo Frio | 05/02</h1>
+            <h1>CategoriaA</h1>
             <table id="tabelaNaoEditavele7" class="tabelae7">
                 <tr>
                     <td>Gabriel Pinho</td>
@@ -350,19 +403,8 @@
 
         <!-- categoria B -->
         <div class="tabela1">
-            <h1 class="catB">Categoria B</h1>
-            <div class="drop2">
 
-                <ul class="dropB">
-                    <li onclick="e1b()">Etapa1</li>
-                    <li onclick="e2b()">Etapa2</li>
-                    <li onclick="e3b()">Etapa3</li>
-                    <li onclick="e4b()">Etapa4</li>
-                    <li onclick="e5b()">Etapa5</li>
-                    <li onclick="e6b()">Etapa6</li>
-                    <li onclick="e7b()">Total</li>
-                </ul>
-            </div>
+
 
             <div class="tabela2">
                 <h1>Pontuação Total</h1>
@@ -477,6 +519,79 @@
         </div>
     </div>
 
+    <div class="home-content">
+        <div class="home-content-1">
+            <h1>O que é o Ranking Costa do Sol?</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="home-content-2">
+            <h1>Regulamento do Ranking <br>Costa do Sol 2023</h1>
+            <p>
+                1)Só pode participar da competição moradores sendo vetada a atletas que estão a passeio ou a
+                trabalho;<br><br>
+                2)Serão realizadas 6 etapas até o início de novembro;<br><br>
+                3)A competição terá duas categorias A e B onde os atletas da B podem jogar na A e atletas da A não podem
+                jogar a B ;<br><br>
+                4)Cada etapa terá premiação para os 4 primeiros de cada categoria;<br><br>
+                5)Pontuação por etapa (não acumulativa):
+                *Campeão 100 pontos
+                *Vice campeão 80 pontos *
+                *3o Lugar 55 pontos
+                *Chegou nas quartas 25 pontos;
+                *Chegou nas oitavas 15 pontos;
+                *Participação 5 pontos;<br><br>
+                6)Caso a fase não seja realizada por conta de poucos inscritos a pontuação da respectiva fase não será
+                aplicada ;<br><br>
+                7)No final do ano teremos uma confraternização onde os 8 melhores de cada categoria serão premiados
+                ;<br><br>
+                8)A pontuação é separada por categoria;<br><br>
+                9)Critérios para desempate :<br><br>
+                A)Mais títulos
+                B)Mais vices
+                C)Mais 3o lugar
+                D)Mais quartas
+                E)Mais oitavas
+                F)Sets vencidos nas finais
+                G)Sets vencidos nas semis
+                H)Número de pontos nas finais
+                I)Número de pontos nas semis
+                J)Sorteio
+                10)Para a edição de 2023 teremos rebaixamento de 2 atletas da A para B e acesso de dois da B para A
+                ;<br><br>
+                11)Participou de uma etapa automaticamente já entra na classificação geral ;<br><br>
+                12)A segunda e 6a etapa terão peso 2 na pontuação;<br><br>
+                13)Proibido o atleta jogar de camiseta regata, boné, de chinelo e camisa branca;<br><br>
+                14)O lucro de cada etapa será guardado para comprar a premiação dos 16 melhores no final do ano
+                ;<br><br>
+                15)As etapas serão realizadas com bolinhas DHS D40+;<br><br>
+                16)Sugerimos que o atleta jogue as partidas com a camisa do seu respectivo clube ou município;<br><br>
+                17)As datas das etapas poderão sofrer alterações por vários motivos;<br><br>
+                18)As partidas nas chaves serão realizadas a princípio em melhor de 3 sets , eventualmente numa etapa
+                com poucos inscritos na chave poderá ser melhor de 5 sets ;<br><br>
+                19)Saindo de chave os jogos serão realizados em melhor de 5 até a final;<br><br>
+                20)Atletas do mesmo clube ,mesma cidade ou afinidade muito próxima terão que fazer o primeiro jogo na
+                chave, cabe aos atletas identificarem essa situação após o sorteio e imediatamente comunicar a mesa
+                organizadora ;<br><br>
+                21)Atitudes anti desportivas será passível de punição de perda dos pontos e eliminação da etapa sem
+                direito a devolução do dinheiro da inscrição;<br><br>
+                22)Um atleta jamais deverá comemorar os pontos olhando para seu adversário;<br><br>
+                23)A princípio fica acordado o valor de 25.00 por inscrição podendo haver alteração no decorrer do ano;
+                24)As etapas serão realizadas aos domingos, feriados ou sábados;
+                25)Para melhor organização dos eventos pedimos que o pagamento das inscrições sejam realizados de forma
+                antecipada, mas fica também permitida a participação de atletas de "última hora" ;<br><br>
+                26)Sobre o rebaixamento caso um atleta se mude da Costa do Sol a sua pontuação não será computada, porém
+                se ele voltar a morar na região no ano de 2024 a sua pontuação será mantida e consequentemente seu
+                rebaixamento efetivado .
+                Ou seja caso isso aconteça o penúltimo da tabela será rebaixado.
+            </p>
+        </div>
+    </div>
+
     <!-- login de organizador -->
     <div class="back">
         <header class="hd">
@@ -494,6 +609,19 @@
 
             </div>
         </header>
+    </div>
+
+    <!-- menu bottom fixo -->
+    <div class="menudown">
+        <div class="menudown1">
+            <img src="./img/home-icon.svg" alt="icone home" width="30px" onclick="home()">
+        </div>
+        <div class="menudown1">
+            <img src="./img/podium-icon.svg" alt="icone pódio" width="30px" onclick="reg()">
+        </div>
+        <div class="menudown1">
+            <img src="./img/user-icon.svg" alt="icone usuario" width="20px" onclick="org()">
+        </div>
     </div>
 
     <!-- pagina do organizador -->
