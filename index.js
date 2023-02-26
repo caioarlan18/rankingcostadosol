@@ -11,19 +11,27 @@ var tabela1 = document.querySelector('table.tabela1')
 var desa = document.querySelector("div.desa")
 var homecontent = document.querySelector('div.home-content')
 var orient = document.querySelector('h1.orient')
+const overlay = document.querySelector('.overlay');
+
 // menu hamburguer
 function menu_hamburguer() {
     menu.classList.toggle('open')
+    overlay.style.display = 'block';
 }
 
-
+function sumir() {
+    menu.classList.remove('open')
+    overlay.style.display = 'none';
+}
 // adaptação single page sem framework
 function close() {
     menu.classList.remove('open')
+
 }
 
 function close1() {
     menu.classList.remove('open')
+    overlay.style.display = 'none';
 }
 
 function reg() {
@@ -184,10 +192,6 @@ function org() {
 
 
 // login page
-var info = document.querySelector('a#info')
-info.addEventListener("click", () => {
-    alert("Esta opção serve somente para organizadores")
-})
 
 
 var entrar = document.querySelector('input.entrar').addEventListener('click', () => {
@@ -246,6 +250,7 @@ function e1a() {
     oi5.classList.toggle('none')
     oi6.classList.toggle('none')
     oi1.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
 
 }
@@ -259,6 +264,7 @@ function e2a() {
     oi5.classList.toggle('none')
     oi6.classList.toggle('none')
     oi2.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function e3a() {
     e13a.classList.toggle('bl')
@@ -270,6 +276,7 @@ function e3a() {
     oi5.classList.toggle('none')
     oi6.classList.toggle('none')
     oi3.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function e4a() {
     e14a.classList.toggle('bl')
@@ -281,6 +288,7 @@ function e4a() {
     oi5.classList.toggle('none')
     oi6.classList.toggle('none')
     oi4.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function e5a() {
     e15a.classList.toggle('bl')
@@ -292,6 +300,7 @@ function e5a() {
     oi5.classList.remove('none')
     oi6.classList.toggle('none')
     oi5.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function e6a() {
     e16a.classList.toggle('bl')
@@ -303,6 +312,7 @@ function e6a() {
     oi5.classList.toggle('none')
     oi6.classList.remove('none')
     oi6.classList.toggle('ordem')
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 
