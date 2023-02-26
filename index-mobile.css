@@ -254,7 +254,7 @@ table.tabela1 {
   width: 90%;
   height: 200px;
   position: absolute;
-  top: 90px;
+  top: 75px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -274,9 +274,14 @@ table.tabela1 {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./img/fundo-rqt.jpg);
+  background-color: #fafafa;
   z-index: 10;
   display: none;
+}
+.back img {
+  position: relative;
+  top: 370px;
+  display: flex;
 }
 .orgopen {
   display: block;
