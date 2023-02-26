@@ -58,6 +58,7 @@ function home() {
     desa.classList.remove('htabela')
     homecontent.classList.remove('ss')
     orient.innerHTML = 'Home'
+    overlay.style.display = 'none';
 }
 function chav() {
     chave.classList.add('chaveopen')
