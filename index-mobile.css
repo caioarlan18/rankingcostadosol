@@ -6,7 +6,15 @@
 body {
   overflow-x: hidden;
 }
-
+ul {
+  -webkit-tap-highlight-color: transparent;
+}
+section {
+  -webkit-tap-highlight-color: transparent;
+}
+div {
+  -webkit-tap-highlight-color: transparent;
+}
 /* cabeçalho */
 .hdd {
   width: 100%;
