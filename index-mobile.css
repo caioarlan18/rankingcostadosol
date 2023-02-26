@@ -251,19 +251,20 @@ table.tabela1 {
 /* login do organizador */
 
 .hd {
-  background-color: white;
-  width: 75%;
-  height: 300px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
+  width: 90%;
+  height: 200px;
   position: absolute;
-  top: 150px;
+  top: 40px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
   z-index: 10;
   display: none;
+}
+.hd-15 {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
 }
 .back {
   position: absolute;
@@ -273,75 +274,65 @@ table.tabela1 {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #ff6a49;
+  background-image: url(./img/fundo-rqt.jpg);
   z-index: 10;
   display: none;
 }
 .orgopen {
   display: block;
 }
-.hd-1 {
-  margin-top: 20px;
-  margin-left: 30px;
-  position: relative;
-  padding-left: 15px;
-}
+
 #info {
   color: #ff6a49;
 }
-.hd-1::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  left: 0;
-  background-color: #ff6a49;
-}
+
 .hd-1 h1 {
   font-family: poppins;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 20px;
-}
-.hd-1 h2 {
-  font-family: poppins;
-  font-weight: 400;
-  font-size: 15px;
-}
-.hdd-2 {
   margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.hdd-2 {
   margin-top: 20px;
 }
 .hdd-2 input {
   width: 90%;
   height: 35px;
   border: 0;
-  background-color: lightgray;
+  border-bottom: 1px solid #b3b3b3;
   margin-bottom: 15px;
-  border-radius: 5px;
+  display: flex;
+  outline: none;
+  background-color: #f2f2f2;
+  font-family: poppins;
+  text-indent: 10px;
 }
 .hdd-2 input::placeholder {
-  position: relative;
-  left: 10px;
   font-family: poppins;
   color: gray;
 }
 .hd-3 {
-  margin-left: 30px;
   margin-top: 15px;
 }
 .hd-3 input {
   width: 90%;
   height: 35px;
   border: 0;
+  display: flex;
+  justify-content: center;
   background-color: #ff6a49;
   margin-bottom: 10px;
   border-radius: 5px;
+  margin-top: 30px;
   color: white;
   font-family: montserrat;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
+  font-family: poppins;
 }
 .hd-3 input:hover {
   background-color: #e93911;
@@ -672,6 +663,10 @@ td {
 .tabela-1,
 .tabela2 {
   margin-top: 50px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  width: 85%;
+  border-radius: 5px;
 }
 .tabela-1 table,
 .tabela-2 table,
@@ -1100,4 +1095,19 @@ li a.subchav2 {
   font-size: 20px;
   font-family: poppins;
   margin-left: 30px;
+}
+
+.rgba {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 29;
+  display: none;
 }
