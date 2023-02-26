@@ -1096,11 +1096,6 @@ li a.subchav2 {
   font-family: poppins;
   margin-left: 30px;
 }
-
-.rgba {
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-}
 .overlay {
   position: fixed;
   top: 0;
