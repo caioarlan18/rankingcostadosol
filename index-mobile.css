@@ -46,9 +46,10 @@ div {
   margin-top: 10px;
   transition: transform 0.3s ease-in-out;
 }
-.hdd-1 img:hover {
-  transform: scale(1.2);
+.zoomed {
+  transform: scale(1.1);
 }
+
 /* menu hamburguer */
 .material-symbols-outlined {
   cursor: pointer;
