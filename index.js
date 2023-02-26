@@ -59,11 +59,25 @@ function home() {
     homecontent.classList.remove('ss')
     orient.innerHTML = 'Home'
     overlay.style.display = 'none';
+
+}
+function logo() {
+    sec.classList.remove("reg")
+    chave.classList.remove('chaveopen')
+    menu.classList.remove("open")
+    hd.classList.remove('orgopen')
+    back.classList.remove("orgopen")
+    orgpage.classList.remove("orgpageopen")
+    chave2.classList.remove('chaveopen')
+    desa.classList.remove('htabela')
+    homecontent.classList.remove('ss')
+    orient.innerHTML = 'Home'
+    overlay.style.display = 'none';
     var img = document.querySelector(".hdd-1 img")
     img.classList.add("zoomed");
     setTimeout(() => {
         img.classList.remove('zoomed')
-    }, 250)
+    }, 200)
 }
 function chav() {
     chave.classList.add('chaveopen')
