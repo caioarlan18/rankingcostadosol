@@ -70,6 +70,7 @@ function chav() {
     chave2.classList.remove('chaveopen')
     homecontent.classList.add('ss')
     orient.innerHTML = 'Chaveamento'
+    overlay.style.display = 'none';
 }
 function chavB() {
     chave2.classList.add('chaveopen')
@@ -82,6 +83,7 @@ function chavB() {
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
     orient.innerHTML = 'Chaveamento'
+    overlay.style.display = 'none';
 
 }
 
@@ -188,6 +190,7 @@ function org() {
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
     orient.innerHTML = 'Painel'
+    overlay.style.display = 'none';
 }
 
 
