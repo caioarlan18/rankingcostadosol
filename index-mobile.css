@@ -15,6 +15,9 @@ section {
 div {
   -webkit-tap-highlight-color: transparent;
 }
+nav {
+  -webkit-tap-highlight-color: transparent;
+}
 /* cabeçalho */
 .hdd {
   width: 100%;
