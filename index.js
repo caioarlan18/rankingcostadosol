@@ -59,6 +59,11 @@ function home() {
     homecontent.classList.remove('ss')
     orient.innerHTML = 'Home'
     overlay.style.display = 'none';
+    var img = document.querySelector(".hdd-1 img")
+    img.classList.add("zoomed");
+    setTimeout(() => {
+        img.classList.remove('zoomed')
+    }, 250)
 }
 function chav() {
     chave.classList.add('chaveopen')
