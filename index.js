@@ -191,6 +191,7 @@ function org() {
     homecontent.classList.add('ss')
     orient.innerHTML = 'Painel'
     overlay.style.display = 'none';
+    chave2.classList.remove('chaveopen')
 }
 
 
