@@ -136,6 +136,18 @@ function chav() {
     homecontent.classList.add('ss')
     orient.innerHTML = 'Chaveamento'
     overlay.style.display = 'none';
+    i1.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.remove('active6')
+    })
+    dot1.classList.remove('apa')
+    dot2.classList.remove('apa')
+    dot3.classList.remove('apa')
 }
 function chavB() {
     chave2.classList.add('chaveopen')
@@ -149,7 +161,18 @@ function chavB() {
     homecontent.classList.add('ss')
     orient.innerHTML = 'Chaveamento'
     overlay.style.display = 'none';
-
+    i1.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.remove('active6')
+    })
+    dot1.classList.remove('apa')
+    dot2.classList.remove('apa')
+    dot3.classList.remove('apa')
 }
 
 // pagina org.html tabela de pontuação
