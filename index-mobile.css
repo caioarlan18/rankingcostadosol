@@ -1037,6 +1037,12 @@ li a.subchav2 {
   z-index: 20;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.menudown1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
 .menudown1 img {
   cursor: pointer;
 }
@@ -1125,4 +1131,43 @@ li a.subchav2 {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 29;
   display: none;
+}
+
+.active5 {
+  stroke-width: 3;
+  stroke: #ff6a49;
+}
+.active6 {
+  stroke-width: 2;
+  stroke: #ff6a49;
+}
+.dot1 {
+  position: absolute;
+  bottom: -4px; /* posiciona a bolinha abaixo do ícone */
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff6a49;
+  display: none;
+}
+.dot2 {
+  position: absolute;
+  bottom: -4px; /* posiciona a bolinha abaixo do ícone */
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff6a49;
+  display: none;
+}
+.dot3 {
+  position: absolute;
+  bottom: -5px; /* posiciona a bolinha abaixo do ícone */
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff6a49;
+  display: none;
+}
+.apa {
+  display: block;
 }
