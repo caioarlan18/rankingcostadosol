@@ -12,7 +12,16 @@ var desa = document.querySelector("div.desa")
 var homecontent = document.querySelector('div.home-content')
 var orient = document.querySelector('h1.orient')
 const overlay = document.querySelector('.overlay');
-
+const i1 = document.querySelectorAll("svg.i1 g path")
+const i2 = document.querySelectorAll("svg.i2 g path")
+const i3 = document.querySelectorAll("svg.i3 g path")
+var dot1 = document.querySelector("span.dot1")
+var dot2 = document.querySelector("span.dot2")
+var dot3 = document.querySelector("span.dot3")
+dot1.classList.add('apa')
+i1.forEach((todos) => {
+    todos.classList.add('active5')
+})
 // menu hamburguer
 function menu_hamburguer() {
     menu.classList.toggle('open')
@@ -45,6 +54,18 @@ function reg() {
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
     orient.innerHTML = 'Pontuações'
+    i1.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.add('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.remove('active6')
+    })
+    dot1.classList.remove('apa')
+    dot2.classList.add('apa')
+    dot3.classList.remove('apa')
 }
 
 function home() {
@@ -59,6 +80,18 @@ function home() {
     homecontent.classList.remove('ss')
     orient.innerHTML = 'Home'
     overlay.style.display = 'none';
+    i1.forEach((todos) => {
+        todos.classList.add('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.remove('active6')
+    })
+    dot1.classList.add('apa')
+    dot2.classList.remove('apa')
+    dot3.classList.remove('apa')
 
 }
 function logo() {
@@ -78,6 +111,18 @@ function logo() {
     setTimeout(() => {
         img.classList.remove('zoomed')
     }, 200)
+    i1.forEach((todos) => {
+        todos.classList.add('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.remove('active6')
+    })
+    dot1.classList.add('apa')
+    dot2.classList.remove('apa')
+    dot3.classList.remove('apa')
 }
 function chav() {
     chave.classList.add('chaveopen')
@@ -212,6 +257,19 @@ function org() {
     orient.innerHTML = 'Painel'
     overlay.style.display = 'none';
     chave2.classList.remove('chaveopen')
+
+    i1.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i2.forEach((todos) => {
+        todos.classList.remove('active5')
+    })
+    i3.forEach((todos) => {
+        todos.classList.add('active6')
+    })
+    dot1.classList.remove('apa')
+    dot2.classList.remove('apa')
+    dot3.classList.add('apa')
 }
 
 
