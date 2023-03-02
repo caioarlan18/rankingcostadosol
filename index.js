@@ -18,6 +18,8 @@ const i3 = document.querySelectorAll("svg.i3 g path")
 var dot1 = document.querySelector("span.dot1")
 var dot2 = document.querySelector("span.dot2")
 var dot3 = document.querySelector("span.dot3")
+const plogin = document.querySelector("section.plogin")
+const editp = document.querySelector("section.editp")
 dot1.classList.add('apa')
 i1.forEach((todos) => {
     todos.classList.add('active5')
@@ -54,6 +56,8 @@ function reg() {
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
     orient.innerHTML = 'Pontuações'
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     i1.forEach((todos) => {
         todos.classList.remove('active5')
     })
@@ -67,7 +71,11 @@ function reg() {
     dot2.classList.add('apa')
     dot3.classList.remove('apa')
 }
-
+function voltar() {
+    plogin.classList.add('pbl')
+    editp.classList.remove('editpbl')
+    orgpage.classList.remove("orgpageopen")
+}
 function home() {
     sec.classList.remove("reg")
     chave.classList.remove('chaveopen')
@@ -78,6 +86,8 @@ function home() {
     chave2.classList.remove('chaveopen')
     desa.classList.remove('htabela')
     homecontent.classList.remove('ss')
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     orient.innerHTML = 'Home'
     overlay.style.display = 'none';
     i1.forEach((todos) => {
@@ -104,6 +114,8 @@ function logo() {
     chave2.classList.remove('chaveopen')
     desa.classList.remove('htabela')
     homecontent.classList.remove('ss')
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     orient.innerHTML = 'Home'
     overlay.style.display = 'none';
     var img = document.querySelector(".hdd-1 img")
@@ -134,6 +146,8 @@ function chav() {
     desa.classList.add('htabela')
     chave2.classList.remove('chaveopen')
     homecontent.classList.add('ss')
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     orient.innerHTML = 'Chaveamento'
     overlay.style.display = 'none';
     i1.forEach((todos) => {
@@ -159,6 +173,8 @@ function chavB() {
     orgpage.classList.remove("orgpageopen")
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     orient.innerHTML = 'Chaveamento'
     overlay.style.display = 'none';
     i1.forEach((todos) => {
@@ -277,6 +293,8 @@ function org() {
     orgpage.classList.remove("orgpageopen")
     desa.classList.add('htabela')
     homecontent.classList.add('ss')
+    plogin.classList.remove('pbl')
+    editp.classList.remove('editpbl')
     orient.innerHTML = 'Painel'
     overlay.style.display = 'none';
     chave2.classList.remove('chaveopen')
@@ -298,6 +316,8 @@ function org() {
 
 // login page
 
+const epp = document.querySelector('button.epp')
+const ctp = document.querySelector('button.ctp')
 
 var entrar = document.querySelector('input.entrar').addEventListener('click', () => {
     var email = document.querySelector('input.email')
@@ -305,20 +325,28 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
     if (email.value.length == 0 || senha.value.length == 0) {
         alert('Campos vazios')
     }
-    else if (email.value != '1') {
+    else if (email.value != 'rcstm@org.com') {
         alert('Email ou senha incorretos')
         email.value = ''
         senha.value = ''
-    } else if (senha.value != '1') {
+    } else if (senha.value != 'rcstm18') {
         alert('Email ou senha incorretos')
         email.value = ''
         senha.value = ''
     }
     else {
-        orgpage.classList.add("orgpageopen")
+        plogin.classList.add("pbl")
         email.value = ''
         senha.value = ''
     }
+})
+epp.addEventListener('click', () => {
+    editp.classList.add('editpbl')
+    plogin.classList.remove('pbl')
+})
+ctp.addEventListener('click', () => {
+    orgpage.classList.add('orgpageopen')
+    plogin.classList.remove('pbl')
 })
 
 
@@ -665,7 +693,7 @@ function removerTodosJogadores2() {
 // oitavas A
 var tabelaEditavel10 = document.querySelector('table#tabelaEditavel10');
 var tabelaNaoEditavel10 = document.querySelector('table#tabelaNaoEditavel10');
-tabelaEditavel.addEventListener('input', (e) => {
+tabelaEditavel10.addEventListener('input', (e) => {
     if (e.target.tagName === 'TD') {
         var linha = e.target.parentNode;
         var celulaNaoEditavel10 = tabelaNaoEditavel10.rows[linha.rowIndex].cells[e.target.cellIndex];
