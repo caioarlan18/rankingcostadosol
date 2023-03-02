@@ -376,6 +376,58 @@
         </div>
     </section>
     <div class="overlay" onclick="sumir()"></div>
+
+    <!-- pós login -->
+    <section class="plogin">
+        <div class="plogin1">
+            <h1>Bem Vindo</h1>
+        </div>
+        <div class="plogin1">
+            <button class="ctp">Começar Torneio</button>
+            <button class="epp">Editar Pontuações</button>
+        </div>
+        <img src="./img/raquete.svg" alt="" width="150px">
+    </section>
+
+
+
+    <section class="editp">
+        <div class="orgpage-1">
+            <button class="voltar" onclick="voltar()">Voltar</button>
+        </div>
+        <div class="orgpage-1">
+            <h2>Editar tabela de pontuação Total - Categoria A</h2>
+
+            <div class="e1">
+                <button class="addnew">adicionar à tabela</button>
+                <button class="salvar1">Salvar</button>
+                <table id="tabelaEditavel">
+                    <tr>
+                        <td class="esp">Nome</td>
+                        <td class="esp">Pontos</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="orgpage-1">
+            <h2>Editar tabela de pontuação - Categoria B</h2>
+            <button class="addnewb">adicionar à tabela</button>
+            <button class="salvar2">Salvar</button>
+            <table id="tabelaEditavel2">
+                <tr>
+                    <td class="esp">Nome</td>
+                    <td class="esp">Pontos</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+    </section>
+
     <!-- chaveamento A -->
 
     <section class="chav">
@@ -394,7 +446,7 @@
         </div>
         <div class="tabela-10">
             <h1>Oitavas de final - Categoria A</h1>
-            <table id="tabelaNaoEditavel10" class="tabela10">
+            <table id="tabelaNaoEditavel10" class="tabela">
                 <tr>
                     <td>Nome</td>
                     <td>Nome</td>
@@ -516,12 +568,28 @@
     <div class="home-content">
         <div class="home-content-1">
             <h1>O que é o Ranking Costa do Sol?</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>É com imenso prazer que discorro acerca do Ranking Costa do Sol, uma competição de tênis de mesa que
+                enaltece os talentos desportivos dos atletas da bela região litorânea denominada Costa do Sol.
+                <br><br>
+                Em suma, o Ranking Costa do Sol é uma prestigiosa competição esportiva que reúne os mais habilidosos
+                praticantes do tênis de mesa, atuantes na região homônima. Este evento, que agrega valor à prática
+                esportiva em questão, é restrito somente aos atletas da mencionada localidade, sendo um torneio local de
+                grande importância.
+                <br><br>
+                Este torneio é devidamente organizado e possui regras criteriosas, a fim de assegurar que o desempenho
+                dos jogadores seja avaliado com equidade e justiça. Além disso, o Ranking Costa do Sol proporciona aos
+                participantes a oportunidade de aprimorar suas habilidades técnicas e táticas, bem como de vivenciar uma
+                experiência única no que se refere ao convívio social com outros entusiastas deste esporte.
+                <br><br>
+                Não obstante, a importância do Ranking Costa do Sol transcende a mera competição esportiva, haja vista
+                que o evento favorece o fortalecimento da identidade cultural local, promove a união dos adeptos do
+                tênis de mesa na região e fomenta o turismo desportivo, atraindo entusiastas de outras localidades.
+                <br><br>
+                Em conclusão, o Ranking Costa do Sol representa, sem sombra de dúvidas, um verdadeiro marco na história
+                do tênis de mesa na região da Costa do Sol. Com suas regras estritas, organização exemplar e talentosos
+                jogadores, este evento é capaz de transformar a rotina de seus participantes, tornando-se uma verdadeira
+                celebração do esporte e da cultura local.
+            </p>
         </div>
         <div class="home-content-2">
             <h1>Regulamento do Ranking <br>Costa do Sol 2023</h1>
@@ -673,39 +741,9 @@
 
     <section class="orgpage">
         <div class="orgpage-1">
-            <h1>Página do organizador</h1>
-        </div>
-        <div class="orgpage-1">
-            <h2>Editar tabela de pontuação Total - Categoria A</h2>
-
-            <div class="e1">
-                <button class="addnew">adicionar à tabela</button>
-                <button class="salvar1">Salvar</button>
-                <table id="tabelaEditavel">
-                    <tr>
-                        <td class="esp">Nome</td>
-                        <td class="esp">Pontos</td>
-                    </tr>
-
-                </table>
-            </div>
-
+            <button class="voltar" onclick="voltar()">Voltar</button>
         </div>
 
-        <div class="orgpage-1">
-            <h2>Editar tabela de pontuação - Categoria B</h2>
-            <button class="addnewb">adicionar à tabela</button>
-            <button class="salvar2">Salvar</button>
-            <table id="tabelaEditavel2">
-                <tr>
-                    <td class="esp">Nome</td>
-                    <td class="esp">Pontos</td>
-                </tr>
-
-            </table>
-
-
-        </div>
         <div class="orgpage-1">
 
             <h2>Editar chaves do torneio - Categoria A</h2>
@@ -1056,7 +1094,7 @@
             let save3 = []
             let tabelaEditavel10 = document.getElementById('tabelaEditavel10');
             let isFirst = true
-            for (let row of tabelaEditavel.rows) {
+            for (let row of tabelaEditavel10.rows) {
                 if (!isFirst) {
                     let obj = {
                         chave: row.cells[0].innerText,
