@@ -325,7 +325,7 @@ var entrar = document.querySelector('input.entrar').addEventListener('click', ()
     if (email.value.length == 0 || senha.value.length == 0) {
         alert('Campos vazios')
     }
-    else if (email.value != 'rcstm@org.com') {
+    else if (email.value != 'rcstm.org') {
         alert('Email ou senha incorretos')
         email.value = ''
         senha.value = ''
@@ -705,26 +705,39 @@ addnew10.addEventListener('click', () => {
     var trEditavel10 = document.createElement("tr");
     var td1Editavel10 = document.createElement('td');
     var td2Editavel10 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
+
     td1Editavel10.contentEditable = true;
     td2Editavel10.contentEditable = true;
     trEditavel10.appendChild(td1Editavel10);
+    trEditavel10.appendChild(tdVs);
     trEditavel10.appendChild(td2Editavel10);
     tabelaEditavel10.appendChild(trEditavel10);
+    var br = document.createElement("br")
+    tabelaEditavel10.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel10 = document.createElement("tr");
     var td1NaoEditavel10 = document.createElement('td');
     var td2NaoEditavel10 = document.createElement("td");
     td1NaoEditavel10.textContent = td1Editavel10.textContent;
     td2NaoEditavel10.textContent = td2Editavel10.textContent;
     trNaoEditavel10.appendChild(td1NaoEditavel10);
+    trNaoEditavel10.appendChild(tdVs1);
     trNaoEditavel10.appendChild(td2NaoEditavel10);
     tabelaNaoEditavel10.appendChild(trNaoEditavel10);
-
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel10.appendChild(br1)
     var btnRemover10 = document.createElement("button");
     btnRemover10.addEventListener('click', () => {
         trEditavel10.remove();
         trNaoEditavel10.remove();
+        tabelaEditavel10.removeChild(br)
+        tabelaNaoEditavel10.removeChild(br1)
     });
     btnRemover10.classList.add('remove')
     trEditavel10.appendChild(btnRemover10);
@@ -749,26 +762,39 @@ addnew11.addEventListener('click', () => {
     var trEditavel11 = document.createElement("tr");
     var td1Editavel11 = document.createElement('td');
     var td2Editavel11 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel11.contentEditable = true;
     td2Editavel11.contentEditable = true;
     trEditavel11.appendChild(td1Editavel11);
+    trEditavel11.appendChild(tdVs);
     trEditavel11.appendChild(td2Editavel11);
     tabelaEditavel11.appendChild(trEditavel11);
+    var br = document.createElement("br")
+    tabelaEditavel11.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel11 = document.createElement("tr");
     var td1NaoEditavel11 = document.createElement('td');
     var td2NaoEditavel11 = document.createElement("td");
     td1NaoEditavel11.textContent = td1Editavel11.textContent;
     td2NaoEditavel11.textContent = td2Editavel11.textContent;
     trNaoEditavel11.appendChild(td1NaoEditavel11);
+    trNaoEditavel11.appendChild(tdVs1);
     trNaoEditavel11.appendChild(td2NaoEditavel11);
     tabelaNaoEditavel11.appendChild(trNaoEditavel11);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel11.appendChild(br1)
 
     var btnRemover11 = document.createElement("button");
     btnRemover11.addEventListener('click', () => {
         trEditavel11.remove();
         trNaoEditavel11.remove();
+        tabelaEditavel11.removeChild(br)
+        tabelaNaoEditavel11.removeChild(br1)
     });
     btnRemover11.classList.add('remove')
     trEditavel11.appendChild(btnRemover11);
@@ -794,26 +820,39 @@ addnew12.addEventListener('click', () => {
     var trEditavel12 = document.createElement("tr");
     var td1Editavel12 = document.createElement('td');
     var td2Editavel12 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel12.contentEditable = true;
     td2Editavel12.contentEditable = true;
     trEditavel12.appendChild(td1Editavel12);
+    trEditavel12.appendChild(tdVs);
     trEditavel12.appendChild(td2Editavel12);
     tabelaEditavel12.appendChild(trEditavel12);
+    var br = document.createElement("br")
+    tabelaEditavel12.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel12 = document.createElement("tr");
     var td1NaoEditavel12 = document.createElement('td');
     var td2NaoEditavel12 = document.createElement("td");
     td1NaoEditavel12.textContent = td1Editavel12.textContent;
     td2NaoEditavel12.textContent = td2Editavel12.textContent;
     trNaoEditavel12.appendChild(td1NaoEditavel12);
+    trNaoEditavel12.appendChild(tdVs1);
     trNaoEditavel12.appendChild(td2NaoEditavel12);
     tabelaNaoEditavel12.appendChild(trNaoEditavel12);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel12.appendChild(br1)
 
     var btnRemover12 = document.createElement("button");
     btnRemover12.addEventListener('click', () => {
         trEditavel12.remove();
         trNaoEditavel12.remove();
+        tabelaEditavel12.removeChild(br)
+        tabelaNaoEditavel12.removeChild(br1)
     });
     btnRemover12.classList.add('remove')
     trEditavel12.appendChild(btnRemover12);
@@ -838,26 +877,39 @@ addnew13.addEventListener('click', () => {
     var trEditavel13 = document.createElement("tr");
     var td1Editavel13 = document.createElement('td');
     var td2Editavel13 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel13.contentEditable = true;
     td2Editavel13.contentEditable = true;
     trEditavel13.appendChild(td1Editavel13);
+    trEditavel13.appendChild(tdVs);
     trEditavel13.appendChild(td2Editavel13);
     tabelaEditavel13.appendChild(trEditavel13);
+    var br = document.createElement("br")
+    tabelaEditavel13.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel13 = document.createElement("tr");
     var td1NaoEditavel13 = document.createElement('td');
     var td2NaoEditavel13 = document.createElement("td");
     td1NaoEditavel13.textContent = td1Editavel13.textContent;
     td2NaoEditavel13.textContent = td2Editavel13.textContent;
     trNaoEditavel13.appendChild(td1NaoEditavel13);
+    trNaoEditavel13.appendChild(tdVs1);
     trNaoEditavel13.appendChild(td2NaoEditavel13);
     tabelaNaoEditavel13.appendChild(trNaoEditavel13);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel13.appendChild(br1)
 
     var btnRemover13 = document.createElement("button");
     btnRemover13.addEventListener('click', () => {
         trEditavel13.remove();
         trNaoEditavel13.remove();
+        tabelaEditavel13.removeChild(br)
+        tabelaNaoEditavel13.removeChild(br1)
     });
     btnRemover13.classList.add('remove')
     trEditavel13.appendChild(btnRemover13);
@@ -889,26 +941,39 @@ addnew20.addEventListener('click', () => {
     var trEditavel20 = document.createElement("tr");
     var td1Editavel20 = document.createElement('td');
     var td2Editavel20 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel20.contentEditable = true;
     td2Editavel20.contentEditable = true;
     trEditavel20.appendChild(td1Editavel20);
+    trEditavel20.appendChild(tdVs);
     trEditavel20.appendChild(td2Editavel20);
     tabelaEditavel20.appendChild(trEditavel20);
+    var br = document.createElement("br")
+    tabelaEditavel20.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel20 = document.createElement("tr");
     var td1NaoEditavel20 = document.createElement('td');
     var td2NaoEditavel20 = document.createElement("td");
     td1NaoEditavel20.textContent = td1Editavel20.textContent;
     td2NaoEditavel20.textContent = td2Editavel20.textContent;
     trNaoEditavel20.appendChild(td1NaoEditavel20);
+    trNaoEditavel20.appendChild(tdVs1);
     trNaoEditavel20.appendChild(td2NaoEditavel20);
     tabelaNaoEditavel20.appendChild(trNaoEditavel20);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel20.appendChild(br1)
 
     var btnRemover20 = document.createElement("button");
     btnRemover20.addEventListener('click', () => {
         trEditavel20.remove();
         trNaoEditavel20.remove();
+        tabelaEditavel20.removeChild(br)
+        tabelaNaoEditavel20.removeChild(br1)
     });
     btnRemover20.classList.add('remove')
     trEditavel20.appendChild(btnRemover20);
@@ -932,26 +997,39 @@ addnew21.addEventListener('click', () => {
     var trEditavel21 = document.createElement("tr");
     var td1Editavel21 = document.createElement('td');
     var td2Editavel21 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel21.contentEditable = true;
     td2Editavel21.contentEditable = true;
     trEditavel21.appendChild(td1Editavel21);
+    trEditavel21.appendChild(tdVs);
     trEditavel21.appendChild(td2Editavel21);
     tabelaEditavel21.appendChild(trEditavel21);
+    var br = document.createElement("br")
+    tabelaEditavel21.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel21 = document.createElement("tr");
     var td1NaoEditavel21 = document.createElement('td');
     var td2NaoEditavel21 = document.createElement("td");
     td1NaoEditavel21.textContent = td1Editavel21.textContent;
     td2NaoEditavel21.textContent = td2Editavel21.textContent;
     trNaoEditavel21.appendChild(td1NaoEditavel21);
+    trNaoEditavel21.appendChild(tdVs1);
     trNaoEditavel21.appendChild(td2NaoEditavel21);
     tabelaNaoEditavel21.appendChild(trNaoEditavel21);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel21.appendChild(br1)
 
     var btnRemover21 = document.createElement("button");
     btnRemover21.addEventListener('click', () => {
         trEditavel21.remove();
         trNaoEditavel21.remove();
+        tabelaEditavel21.removeChild(br)
+        tabelaNaoEditavel21.removeChild(br1)
     });
     btnRemover21.classList.add('remove')
     trEditavel21.appendChild(btnRemover21);
@@ -975,26 +1053,39 @@ addnew22.addEventListener('click', () => {
     var trEditavel22 = document.createElement("tr");
     var td1Editavel22 = document.createElement('td');
     var td2Editavel22 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel22.contentEditable = true;
     td2Editavel22.contentEditable = true;
     trEditavel22.appendChild(td1Editavel22);
+    trEditavel22.appendChild(tdVs);
     trEditavel22.appendChild(td2Editavel22);
     tabelaEditavel22.appendChild(trEditavel22);
+    var br = document.createElement("br")
+    tabelaEditavel22.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel22 = document.createElement("tr");
     var td1NaoEditavel22 = document.createElement('td');
     var td2NaoEditavel22 = document.createElement("td");
     td1NaoEditavel22.textContent = td1Editavel22.textContent;
     td2NaoEditavel22.textContent = td2Editavel22.textContent;
     trNaoEditavel22.appendChild(td1NaoEditavel22);
+    trNaoEditavel22.appendChild(tdVs1);
     trNaoEditavel22.appendChild(td2NaoEditavel22);
     tabelaNaoEditavel22.appendChild(trNaoEditavel22);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel22.appendChild(br1)
 
     var btnRemover22 = document.createElement("button");
     btnRemover22.addEventListener('click', () => {
         trEditavel22.remove();
         trNaoEditavel22.remove();
+        tabelaEditavel22.removeChild(br)
+        tabelaNaoEditavel22.removeChild(br1)
     });
     btnRemover22.classList.add('remove')
     trEditavel22.appendChild(btnRemover22);
@@ -1019,26 +1110,39 @@ addnew23.addEventListener('click', () => {
     var trEditavel23 = document.createElement("tr");
     var td1Editavel23 = document.createElement('td');
     var td2Editavel23 = document.createElement("td");
+    var tdVs = document.createElement("td");
+    tdVs.innerText = "vs"
+    tdVs.classList.add('avu1')
     td1Editavel23.contentEditable = true;
     td2Editavel23.contentEditable = true;
     trEditavel23.appendChild(td1Editavel23);
+    trEditavel23.appendChild(tdVs);
     trEditavel23.appendChild(td2Editavel23);
     tabelaEditavel23.appendChild(trEditavel23);
+    var br = document.createElement("br")
+    tabelaEditavel23.appendChild(br)
 
-
+    var tdVs1 = document.createElement("td");
+    tdVs1.innerText = "vs"
+    tdVs1.classList.add('avu1')
     var trNaoEditavel23 = document.createElement("tr");
     var td1NaoEditavel23 = document.createElement('td');
     var td2NaoEditavel23 = document.createElement("td");
     td1NaoEditavel23.textContent = td1Editavel23.textContent;
     td2NaoEditavel23.textContent = td2Editavel23.textContent;
     trNaoEditavel23.appendChild(td1NaoEditavel23);
+    trNaoEditavel23.appendChild(tdVs1);
     trNaoEditavel23.appendChild(td2NaoEditavel23);
     tabelaNaoEditavel23.appendChild(trNaoEditavel23);
+    var br1 = document.createElement("br")
+    tabelaNaoEditavel23.appendChild(br1)
 
     var btnRemover23 = document.createElement("button");
     btnRemover23.addEventListener('click', () => {
         trEditavel23.remove();
         trNaoEditavel23.remove();
+        tabelaEditavel23.removeChild(br)
+        tabelaNaoEditavel23.removeChild(br1)
     });
     btnRemover23.classList.add('remove')
     trEditavel23.appendChild(btnRemover23);
