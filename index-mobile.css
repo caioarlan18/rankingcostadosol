@@ -220,7 +220,6 @@ nav {
 
 table.tabela {
   height: 50px;
-
   width: 100%;
 }
 
@@ -676,7 +675,7 @@ td {
   transition: 0.5s;
 }
 .bl {
-  height: 600px;
+  height: 950px;
   overflow: visible;
   transition: 0.5s;
 }
