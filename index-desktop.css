@@ -22,6 +22,16 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+  body {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .hdesk {
+    visibility: visible;
+    display: flex;
+    font-family: poppins;
+    margin-top: 300px;
+  }
 
   .hd-2 a {
     color: #3367d5;
