@@ -670,14 +670,10 @@ td {
 .tabela-5,
 .tabela-6,
 .tabela-7 {
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
+  display: none;
 }
 .bl {
-  height: 950px;
-  overflow: visible;
-  transition: 0.5s;
+  display: block;
 }
 .tabela-1,
 .tabela2 {
@@ -759,14 +755,10 @@ h1.catB {
 .tabela6,
 .tabela7,
 .tabela8 {
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
+  display: none;
 }
 .blb {
-  height: 550px;
-  overflow: visible;
-  transition: 0.5s;
+  display: block;
 }
 .editp {
   padding-bottom: 1600px;
@@ -1126,7 +1118,7 @@ li a.subchav2 {
   background-color: white;
   height: 500px;
   margin-top: 40px;
-  padding-bottom: 1000px;
+  padding-bottom: 1700px;
 }
 .maintxtpt h1 {
   color: #3e4441;
@@ -1277,7 +1269,6 @@ li a.subchav2 {
 .avu1 {
   width: 10%;
 }
-
 .hdesk {
   display: none;
 }
